@@ -1,3 +1,52 @@
 html * {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif
 }
+
+body {
+    background-image: url(/assets/images/background.jpg)
+}
+
+.firstHeader {
+    height: 40px;
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    background-color: 	#151316;
+}
+
+.wrapper {
+/* 
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 30%;
+    border: 1px solid red;
+    margin: 5px; */
+
+
+    max-width: 1680px;
+    height: 200px;
+    margin-top: 50px;
+    margin: 0 auto;
+    padding: 0 20px;
+    border: 1px solid red
+}
+
+.nameContainer {
+    height: 80px;
+    color: #333366;
+    margin-top: 60px;
+    font-size: xx-large;
+}
+ a {
+    color:rgb(173, 170, 170);
+    display: inline;
+ }
+
+ .logInContainder {
+     color:rgb(173, 170, 170);
+     float: right;
+ }
