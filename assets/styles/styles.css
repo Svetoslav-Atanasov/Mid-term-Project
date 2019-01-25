@@ -1,14 +1,24 @@
 html * {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    
+    box-sizing: border-box;
 }
 
 body {
-    background-image: url(/assets/images/background.jpg);
-    box-sizing: border-box;
+    background-image: url(/assets/images/background.jpg);    
     font-size: 14px;
 }
+a {
 
+    color: #ff6500;
+    display: inline;
+    text-decoration: none;
+ }
+ a:hover {
+     color: #d45b0b;     
+     text-decoration: underline;
+ }
+
+/* header top */
 .firstHeader {
 
     height: 41px;
@@ -17,42 +27,27 @@ body {
     right: 0;
     left: 0;
     background-color: 	#151316;
-}
-
-.wrapper {
-/* 
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 30%;
-    border: 1px solid red;
-    margin: 5px; */
-
-
-    max-width: 1680px;
-    height: 200px;
-    margin-top: 50px;
-    margin: 0 auto;    
-    border: 1px solid red
-}
-
-.nameContainer {
-
-    height: 80px;
-    color: #333366;
-    margin-top: 80px;
-    font-size: 32px;
-    font-weight: bolder;
-}
- a {
-
     color:#999;
-    display: inline;
- }
+    
+}
+header > div > a:visited {
+    color: #999;
+}
+header > div > a {
+    color: #999;
+}
 
- .logInContainer {
+div.brandContainer a:hover{
+    color: #ededed;
+    border-bottom: none;
+}
+
+div.logInContainer a:hover {
+    color: #ededed;
+    border-bottom: none;
+}
+
+.logInContainer {
 
     float: right;
     padding-top: 13px;
@@ -70,11 +65,92 @@ body {
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     
  }
- a:-webkit-any-link {
-    color: -webkit-link;
-    cursor: pointer;
-    text-decoration: underline;
+
+ /* header middle */
+ .nameContainer {
+
+    height: 50px;
+    color: #333366;
+    margin-top: 80px;
+    margin-left: 111px;
+    font-size: 32px;
+    font-weight: bolder;
 }
-a:hover {
-    color: white;
+
+/* wrap container */
+.wrapper {
+/* 
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 30%;
+    border: 1px solid red;
+    margin: 5px; */
+
+
+    max-width: 1700px;
+    
+    margin-top: 50px;
+    margin: 0 auto;    
+    border: 1px solid red
 }
+
+
+
+
+
+
+
+/* left side wrapper*/
+.leftBox {
+    
+    width: 25%;    
+    display: inline-block;
+    
+    
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.blockMainMenu {
+    padding: 13px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ededed;
+    font-size: 15px;    
+    font-weight: normal;
+    background-color: #fff;    
+    
+}
+article.blockMainMenu > ul {
+    margin-top: 10px;
+    padding-bottom: 8px;
+}
+
+article.blockMainMenu > h2 {
+    
+    color:#999;
+    font-weight: bold;
+}
+
+.blockNavigationMenu {
+    margin-top: 20px;
+}
+
+article.blockMainMenu > ul > li > p >a {
+    font-weight: bold;    
+}
+article.blockMainMenu >ul > li > p {
+    margin-top: 15px;
+}
+.collapsible {
+    
+    
+    cursor: pointer;    
+    width: 100%;    
+    text-align: left;
+    
+  }
+
