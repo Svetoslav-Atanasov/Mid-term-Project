@@ -1,13 +1,17 @@
 html * {
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    
 }
 
 body {
-    background-image: url(/assets/images/background.jpg)
+    background-image: url(/assets/images/background.jpg);
+    box-sizing: border-box;
+    font-size: 14px;
 }
 
 .firstHeader {
-    height: 40px;
+
+    height: 41px;
     position: fixed;
     top:0;
     right: 0;
@@ -30,23 +34,47 @@ body {
     max-width: 1680px;
     height: 200px;
     margin-top: 50px;
-    margin: 0 auto;
-    padding: 0 20px;
+    margin: 0 auto;    
     border: 1px solid red
 }
 
 .nameContainer {
+
     height: 80px;
     color: #333366;
-    margin-top: 60px;
-    font-size: xx-large;
+    margin-top: 80px;
+    font-size: 32px;
+    font-weight: bolder;
 }
  a {
-    color:rgb(173, 170, 170);
+
+    color:#999;
     display: inline;
  }
 
- .logInContainder {
-     color:rgb(173, 170, 170);
-     float: right;
+ .logInContainer {
+
+    float: right;
+    padding-top: 13px;
+    color:#999;
+    padding-right: 120px;
+     
  }
+
+ .brandContainer {
+     
+    float: left;
+    padding-top: 10px;
+    padding-left: 111px;
+    font-size: 20px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    
+ }
+ a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+a:hover {
+    color: white;
+}
