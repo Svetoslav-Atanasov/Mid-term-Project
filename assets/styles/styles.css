@@ -98,7 +98,7 @@ div.logInContainer a:hover {
 
 .regionMainContainer {
     display: inline-block;
-    border: 1px solid black;
+    
     width: 70%;
 }
 
@@ -143,6 +143,9 @@ article.blockMainMenu>ul>li>p>a {
 article.blockMainMenu>ul>li>p {
     margin-top: 15px;
 }
+article.blockMainMenu>ul>li {
+    margin-bottom: 6px;
+}
 
 .collapsible {
     cursor: pointer;
@@ -150,6 +153,13 @@ article.blockMainMenu>ul>li>p {
     text-align: left;
 }
 
+.icons {
+    width: 16px;
+    height: 16px;
+    margin-top: 3px;
+    margin-right: 5px;
+    vertical-align: top;
+}
 
 
 /* center side/ main */
