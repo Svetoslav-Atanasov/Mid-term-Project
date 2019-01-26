@@ -98,9 +98,9 @@ div.logInContainer a:hover {
 
 .regionMainContainer {
     display: inline-block;
-    
     width: 70%;
 }
+
 
 /* left side wrapper*/
 
@@ -119,7 +119,6 @@ div.logInContainer a:hover {
     font-size: 15px;
     font-weight: normal;
     background-color: #fff;
-    
 }
 
 article.blockMainMenu>ul {
@@ -143,6 +142,7 @@ article.blockMainMenu>ul>li>p>a {
 article.blockMainMenu>ul>li>p {
     margin-top: 15px;
 }
+
 article.blockMainMenu>ul>li {
     margin-bottom: 6px;
 }
@@ -163,6 +163,7 @@ article.blockMainMenu>ul>li {
 
 
 /* center side/ main */
+
 .middleContainer {
     width: 25%;
     /* display: inline-block; */
@@ -177,24 +178,28 @@ article.blockMainMenu>ul>li {
     color: #333366;
     font-weight: bold;
 }
-main.middleContainer > h2 {
+
+main.middleContainer>h2 {
     margin: 10px 0;
     font-size: 28px;
 }
+
 .courseBox {
     margin-bottom: 15px;
     border: 1px dotted #ddd;
     border-radius: 4px;
     padding: 5px;
 }
-div.courseBox:hover {
-    background-color:#E6E6E6
-}
 
+div.courseBox:hover {
+    background-color: #E6E6E6
+}
 
 .calendar-box {
     float: right;
 }
+
+
 /* login; moodle logo */
 
 footer {
@@ -204,6 +209,7 @@ footer {
     margin-bottom: 20px;
     text-align: center;
 }
+
 
 /* .footerLogInContainer {
     color: black;
@@ -224,12 +230,38 @@ footer {
     font-size: 15px;
     font-weight: normal;
     background-color: #fff;
+    /* display two divs in a container with equal 50/50 width (bottom 3) + width: auto; flex: 1 - on the 2 divs */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.loginForm {
+#infoNewUsers {
     box-sizing: border-box;
     display: block;
     float: left;
+    flex-direction: column;
+}
+
+#signUpPanel {
+    width: auto;
+    flex: 1;
+    /* flex-basis: 50%; */
+}
+
+#signUpPanel ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+#signUpPanel ol>li {
+    padding-left: 20px;
+}
+
+.loginForm {
+    width: auto;
+    flex: 1;
+    /* flex-basis: 50%; */
 }
 
 .loginForm>h2 {
@@ -239,14 +271,8 @@ footer {
     font-weight: bolder;
 }
 
-#infoNewUsers {
-    box-sizing: border-box;
-    display: block;
-    float: left;
-}
 
-
-/* cookie page */
+/* cookies page */
 
 #cookiesHeader {
     color: #333366;
