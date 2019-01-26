@@ -162,3 +162,64 @@ footer {
 .home {
     padding-top: 5px;
 }
+
+
+/* login Main */
+
+#loginMain {
+    padding: 13px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ededed;
+    font-size: 15px;
+    font-weight: normal;
+    background-color: #fff;
+}
+
+.loginForm {
+    box-sizing: border-box;
+    display: block;
+    float: left;
+}
+
+.loginForm>h2 {
+    height: 50px;
+    color: #333366;
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+#infoNewUsers {
+    box-sizing: border-box;
+    display: block;
+    float: left;
+}
+
+
+/* cookie page */
+
+#cookiesHeader {
+    color: #333366;
+    font-size: 32px;
+    font-weight: bolder;
+    margin: 20px 0;
+}
+
+#cookiesWrapper {
+    max-width: 1700px;
+    margin-top: 100px !important;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #336;
+    background-color: #fff;
+    padding: 20px 25px;
+    text-align: left;
+}
+
+#cookiesInfo>p {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
