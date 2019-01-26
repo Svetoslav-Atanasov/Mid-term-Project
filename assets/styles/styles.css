@@ -96,11 +96,16 @@ div.logInContainer a:hover {
     border: 1px solid red
 }
 
+.regionMainContainer {
+    display: inline-block;
+    border: 1px solid black;
+    width: 70%;
+}
 
 /* left side wrapper*/
 
 .leftBox {
-    width: 25%;
+    width: 31%;
     display: inline-block;
     font-weight: bold;
     font-size: 20px;
@@ -114,6 +119,7 @@ div.logInContainer a:hover {
     font-size: 15px;
     font-weight: normal;
     background-color: #fff;
+    
 }
 
 article.blockMainMenu>ul {
@@ -145,6 +151,36 @@ article.blockMainMenu>ul>li>p {
 }
 
 
+
+/* center side/ main */
+.middleContainer {
+    width: 25%;
+    /* display: inline-block; */
+    float: right;
+    padding: 19px;
+    width: 65%;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ededed;
+    color: #333366;
+    font-weight: bold;
+}
+main.middleContainer > h2 {
+    margin: 10px 0;
+    font-size: 28px;
+}
+.courseBox {
+    margin-bottom: 15px;
+    border: 1px dotted #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+div.courseBox:hover {
+    background-color:#E6E6E6
+}
+
 /* login; moodle logo */
 
 footer {
@@ -162,3 +198,5 @@ footer {
 .home {
     padding-top: 5px;
 }
+
+
