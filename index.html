@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="assets/styles/reset.css" />
     <link rel="stylesheet" href="assets/styles/styles.css" />
     <link rel="shortcut icon" href="http://moodle.ittalents.bg/theme/image.php/more/theme/1460374795/favicon">
-
+    <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+    <script src="./js/index.js"></script>
 </head>
 
 <body>
-    <p>Font test Helvetica</p>
+
 
     <!-- first Header / fixed -->
     <header class="firstHeader">
@@ -22,7 +23,8 @@
             <a href="">IT Talents Training Camp</a>
         </div>
         <!-- Login page -->
-        <div class="logInContainer">You are not logged in. (<a href="/html/login.html">Log in</a>)
+        <div class="logInContainer">You are not logged in. (
+            <a href="/html/login.html">Log in</a>)
         </div>
     </header>
     <!-- container page -->
@@ -63,7 +65,7 @@
                         </li>
                     </ul>
                     <ul>
-                       
+
 
                     </ul>
                 </article>
@@ -73,19 +75,41 @@
                 <h2>Available courses</h2>
                 <div class="courseBox">
                     <img class="icons" src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/i/course">
-                    <a href="">JavaScript Season 10<a>
+                    <a href="">JavaScript Season 10</a>
                 </div>
             </main>
         </div>
         <!-- za kalendar -->
-        <div></div>
+        <div class="calendar-box">
+            <div id="demo" class= "yui3-skin-sam yui3-g" >
+                <!-- You need this skin class -->
+
+                <div id="leftcolumn" class="yui3-u" >
+                    <!-- Container for the calendar -->
+                    <div id="mycalendar"></div>
+                </div>
+                <!-- <div id="rightcolumn" class="yui3-u">
+                    <div id="links" style="padding-left:20px;">
+                        
+                        <button id="togglePrevMonth" class="yui3-button">Toggle Previous Month's Dates</button>
+                        <br>
+                        <button id="toggleNextMonth" class="yui3-button">Toggle Next Month's Dates</button>
+                        <br> Selected date:
+                        <span id="selecteddate"></span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
 
         <footer>
-            <div class="footerLogInContainer">You are not logged in. (<a href="/html/login.html">Log in</a>)
-            </div>
+            <div class="footerLogInContainer">You are not logged in. (
 
+                <a href="/html/login.html">Log in</a>)
+            </div>
             <div class="siteLink">
-                <a title="Moodle" href="http://moodle.org/"><img src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/moodlelogo" alt="Moodle logo"></a>
+                <a title="Moodle" href="http://moodle.org/">
+                    <img src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/moodlelogo" alt="Moodle logo">
+                </a>
             </div>
         </footer>
 

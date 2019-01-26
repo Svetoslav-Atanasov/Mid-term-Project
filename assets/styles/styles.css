@@ -191,6 +191,10 @@ div.courseBox:hover {
     background-color:#E6E6E6
 }
 
+
+.calendar-box {
+    float: right;
+}
 /* login; moodle logo */
 
 footer {
@@ -201,9 +205,9 @@ footer {
     text-align: center;
 }
 
-.footerLogInContainer {
+/* .footerLogInContainer {
     color: black;
-}
+} */
 
 .home {
     padding-top: 5px;
