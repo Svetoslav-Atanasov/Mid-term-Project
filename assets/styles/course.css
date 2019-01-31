@@ -5,7 +5,6 @@ html * {
 
 body {
     background-image: url(/assets/images/background.jpg);
-    font-size: 14px;
 }
 
 a {
@@ -20,7 +19,7 @@ a:hover {
 }
 
 .firstHeader {
-    height: 41px;
+    height: 43px;
     position: fixed;
     top: 0;
     right: 0;
@@ -74,6 +73,7 @@ div.logInContainer a:hover {
 
 .wrapper {
     display: flex;
+    /* flex-wrap: wrap; */
     justify-content: space-between;
     max-width: 1700px;
     margin: 50px;
@@ -89,14 +89,12 @@ div.logInContainer a:hover {
 
 
 .leftBox {
-    width: 31%;
+    width: 23%;
     display: inline-block;
-    font-weight: bold;
-    font-size: 20px;
 }
 
 .blockMainMenu {
-    padding: 1.2vh;
+    padding: 2vh;
     width: 100%;
     border-radius: 4px;
     border: 1px solid #ededed;
@@ -147,10 +145,8 @@ article.blockMainMenu>ul>li {
 
 
 .middleContainer {
-    width: 25%;
-    float: right;
+    width: 50%;
     padding: 19px;
-    width: 65%;
     font-weight: bold;
     font-size: 20px;
     background-color: #fff;
@@ -190,7 +186,7 @@ footer {
 
 #courseNav {
     display: flex;
-    float: left;  
+    float: left;
 }
 #courseNav > li {
     color: #ff6500;
@@ -253,9 +249,30 @@ margin-bottom: 2vh;
 }
 
 .rightBox {
-    width: 31%;
+    width: 23%;
     display: inline-block;
     font-weight: bold;
     font-size: 20px;
+    margin-top: 5vh;
     
 }
+
+.search {
+    height: 2vw;
+    border-radius: 4px;
+    border-width: 1.1px;
+    border-color: #dcdcdc;
+    margin-left: 10px;
+}
+
+button.search {
+    width: 6.2vh;
+    font-size: 2vh;
+    background-color: #f9f9f9;
+}
+
+button.search:hover {
+    background-color: #ededed;
+    cursor: pointer;
+}
+
