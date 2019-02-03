@@ -201,9 +201,6 @@ div.courseBox:hover {
     float: right;
 }
 
-
-/* login; moodle logo */
-
 footer {
     border-top: 2px solid white;
     padding-top: 20px;
@@ -212,11 +209,15 @@ footer {
     text-align: center;
 }
 
-
-/* .footerLogInContainer {
-    color: black;
-} */
-
 .home {
     padding-top: 5px;
+}
+
+
+/* signup page */
+
+#signupContainer {
+    background-color: #fff;
+    padding: 29px 29px;
+    border-radius: 4px;
 }

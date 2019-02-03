@@ -36,25 +36,30 @@
         <main id="loginMain">
             <div class="loginForm">
                 <h2>Log in</h2>
-                <div id="usernamePassword">
-                    <div>
-                        <label for="username">Username</label>
-                        <input type="text" name="username" required>
-                    </div>
-                    <div>
-                        <label for="password">Password</label>
-                        <input type="password" name="password" required>
-                    </div>
+
+
+                <div id="username">
+                    <label for="usernameInput">Username</label>
+                    <input id="usernameInput" type="text" name="username" required>
+                </div>
+
+                <div id="password">
+                    <label for="passwordInput">Password</label>
+                    <input id="passwordInput" type="password" name="password" required>
                 </div>
 
 
-                <form>
-                    <input type="checkbox" name="remember" value="rememberUsername"> Remember username
 
-                    <button onclick="document.getElementById()">Log in</button>
-
+                <div>
+                    <input id="remember" type="checkbox" name="remember" value="rememberUsername">
+                    <label for="remember">Remember username</label>
+                </div>
+                <div>
+                    <button id="logInButton" onclick="document.getElementById()">Log in</button>
+                </div>
+                <div>
                     <a href="../html/forgottenPassword.html">Forgotten your username or password?</a>
-                </form>
+                </div>
 
                 <div>Cookes must be enabled in your browser
                     <a href="../html/cookies.html"><img src="../images/question mark.svg"></a>
@@ -63,7 +68,7 @@
 
             <div id="signUpPanel">
                 <h2>Is this your first time here?</h2>
-                <div>
+                <div id="introParagraph">
                     Hi! For full access to courses you'll need to take a minute to create a new account for yourself on this web site. Each of the individual courses may also have a one-time "enrolment key", which you won't need until later. Here are the steps:
                     <ol>
                         <li>Fill out the <a href="../html/signup.html">New Account</a> form with your details.</li>
@@ -75,17 +80,14 @@
                         </li>
                         <li>You can now access the full course. From now on you will only need to enter your personal username and password (in the form on this page) to log in and access any course you have enrolled in.</li>
                     </ol>
-                    <div>
-                        <form>
-                            <div><input type="submit" value="Create new account"></div>
-                        </form>
-                    </div>
+                </div>
+                <div>
+                    <div><input id="createNewAccount" type="submit" value="Create new account"></div>
                 </div>
             </div>
+        </main>
     </div>
 
-    </main>
-    </div>
 
 
 
@@ -99,8 +101,6 @@
     </footer>
 
     </div>
-
-
 
 </body>
 
