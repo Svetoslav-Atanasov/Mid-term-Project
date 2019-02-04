@@ -221,3 +221,12 @@ footer {
     padding: 29px 29px;
     border-radius: 4px;
 }
+
+#newAccount {
+    height: 50px;
+    color: #333366;
+    font-size: 28px;
+    font-weight: bolder;
+    padding: 29px 29px;
+    margin: 5px 5px;
+}
