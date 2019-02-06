@@ -41,29 +41,6 @@ var userStorage = (function() {
         new Student('student', 'Bb-12345', 'l.eftimova@gmail.com', 'l.eftimova@gmail.com', 'Lora', 'Eftimova', 'Sofia', 'Bulgaria')
     ];
 
-
-
-
-    /////////////////////////////////////////////////////////////////////////////////
-
-    //Login form creation
-
-    byId('logInButton').addEventListener('click', function(event) {
-        event.preventDefault();
-
-        const username = byId('usernameInput').value;
-        const password = byId('passwordInput').value;
-
-        const user = userStorage.login(username, password);
-        console.log(user)
-        if (user) {
-            document.location.href = '../html/course.html'
-        } else {
-            document.querySelector('.errorMessage').innerText = 'Wrong username and/or password';
-        }
-    }, false);
-
-
     /////////////////////////////////////////////////////////////////////////////////
 
 
@@ -71,15 +48,25 @@ var userStorage = (function() {
     return {
         // push a new user in userlist when he wants to register
         register: function(username, password, email, emailAgain, firstName, surname, city, country) {
+            var userListFromLocalStorage = localStorage.getItem('userList');
+            if (userListFromLocalStorage) {
+                userList = JSON.parse(userListFromLocalStorage);
+            }
+
             userList.push(new Student(username, password, email, emailAgain, firstName, surname, city, country));
+
             // so you can register users without having a server
             localStorage.setItem('userList', JSON.stringify(userList));
-            console.log('REGISTERED!')
         },
 
         // checks if there is a user in the DB - userList
 
         login: function(username, password) {
+            var userListFromLocalStorage = localStorage.getItem('userList');
+            if (userListFromLocalStorage) {
+                userList = JSON.parse(userListFromLocalStorage);
+            }
+
             return userList.find(user => user.username === username &&
                 user.password === password);
         }
