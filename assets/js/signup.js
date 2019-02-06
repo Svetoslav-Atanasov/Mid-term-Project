@@ -129,3 +129,79 @@ byId('menuExpand2').addEventListener('click', function() {
         menuexpanded2 = true;
     }
 });
+
+// register form
+
+// $(function() {
+
+window.addEventListener('DOMContentLoaded', function() {
+
+    // template for not always writing document.getElementById
+    // const byId = (id) => document.getElementById(id);
+
+    // byId('showRegistrationForm').addEventListener('click', function() {
+    //     byId('showRegistrationForm').style.display = 'none';
+    //     byId('registrationForm').style.display = 'flex';
+
+    // });
+
+    byId('createMyNewAccountButton').addEventListener('click', function() {
+        //to be able to use register and than get the message - congrats... 
+        event.preventDefault();
+        // all fields needed to register: username, password, email, emailAgain, firstName, surname, city, country
+
+        // getElement by id - look for IDs
+        let username = byId('usernameInput').value;
+        let password = byId('passwordInput').value;
+        let email = byId('emailInput').value;
+        let emailAgain = byId('emailAgainInput').value;
+        let firstName = byId('firstNameInput').value;
+        let surname = byId('surnameInput').value;
+        let city = byId('cityInput').value;
+        let country = byId('countryInput').value;
+
+
+
+        // flag - to see if there are any mistakes in the registration attempt
+        // ADD VALIDATION
+        let hasErrors = false;
+
+        // // as userStorage is put above userController it becomes like a global variable and you can access it            //hide something, show something else
+        // if (username.trim().length <= 5) {
+        //     let hasErrors = false;
+        //     // message for username that does not meet the requirements
+        //     document.querySelector('#usernameContainer > .error').innerText = 'Username must be at least 5 characters long';
+        // } else {
+        //     // no message if username meets requirements
+        //     document.querySelector('#usernameContainer > .error').innerText = '';
+        // }
+
+        // if (password.trim().length <= 5) {
+        //     let hasErrors = false;
+        //     // message for username that does not meet the requirements
+        //     document.querySelector('#passwordContainer > .error').innerText = 'Password must be at least 5 characters long';
+        // } else {
+        //     // no message if username meets requirements
+        //     document.querySelector('#passwordContainer > .error').innerText = '';
+        // }
+
+        // if (!validateEmail(email)) {
+        //     let hasErrors = false;
+        //     // message for username that does not meet the requirements
+        //     document.querySelector('#emailContainer > .error').innerText = 'Please, input a valid email address';
+        // } else {
+        //     // no message if username meets requirements
+        //     document.querySelector('#emailContainer > .error').innerText = '';
+        // }
+
+        if (!hasErrors) {
+            userStorage.register(username, password, email, emailAgain, firstName, surname, city, country);
+            document.location.href = '../html/login.html';
+        }
+    }, false);
+});
+// validate mail; can put it down here, because of hoisting
+// function validateEmail(email) {
+//     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//     return re.test(String(email).toLowerCase());
+// };
