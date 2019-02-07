@@ -39,13 +39,14 @@
 
 
                 <div id="username">
-                    <p class='errorMessage'></p>
+                    <span class="errorLogin"><p class='errorMessage'><img class="errorMessageWarning" src="../images/warning.svg" /> Invalid login, please try again</p></span>
                     <label for="usernameInput">Username</label>
                     <input id="usernameInput" type="text" name="username" required>
                 </div>
 
                 <div id="password">
-                    <p class='errorMessage'></p>
+                    <span class="errorLogin"><p class='errorMessage'><img class="errorMessageWarning" src="../images/warning.svg" /> Invalid login, please try again</p></span>
+                    <!-- <p class='errorMessage'><img class="errorMessageWarning" src="../images/warning.svg" /> Invalid login, please try again</p> -->
                     <label for="passwordInput">Password</label>
                     <input id="passwordInput" type="password" name="password" required>
                 </div>
@@ -85,7 +86,8 @@
                 </div>
                 <div>
                     <!-- button used as a link to signup.html-->
-                    <button id="createNewAccount" onclick="window.location.href='../html/signup.html'">Create new account</button>
+                    <button id="createNewAccount" onclick="window.location.href='../html/signup.html'">Create new
+                        account</button>
                 </div>
             </div>
         </main>

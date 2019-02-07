@@ -15,6 +15,9 @@
         if (user) {
             document.location.href = '../html/course.html'
         } else {
-            document.querySelector('.errorMessage').innerText = 'Wrong username and/or password';
+            // document.querySelector('.errorMessage').innerText = 'Invalid login, please try again';
+            // document.querySelector('.errorMessage').style.display = 'block';
+            // document.querySelector('.errorMessageWarning').style.display = 'block';
+            document.querySelector('.errorLogin').style.display = 'block'
         }
     }, false);

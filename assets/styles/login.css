@@ -234,3 +234,19 @@
     #remember {
         cursor: pointer;
     }
+    /* invalid login message - from login.js */
+    
+    .errorLogin {
+        display: none;
+    }
+    
+    .errorMessage {
+        /* display: none; */
+        color: #b94a48;
+        font-size: 14px;
+        line-height: 45px;
+    }
+    
+    .errorMessageWarning {
+        /* display: none; */
+    }
