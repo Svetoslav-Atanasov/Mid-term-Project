@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Moodle</title>
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/login.css" />
+    <link rel="shortcut icon" href="http://moodle.ittalents.bg/theme/image.php/more/theme/1460374795/favicon">
+
+</head>
+
+<body>
+
+    <!-- first Header / fixed -->
+    <header class="firstHeader">
+
+        <div class="brandContainer">
+            <a href="/index.html">IT Talents Training Camp</a>
+        </div>
+        <!-- Login page -->
+        <div class="logInContainer">You are not logged in.
+        </div>
+    </header>
+
+    <!-- second header -->
+    <header>
+        <div class="nameContainer">
+            <h1>IT Talents Moodle</h1>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <main id="loginMain">
+            <div class="loginForm">
+                <h2>Log in</h2>
+
+
+                <div id="username">
+                    <span class="errorLogin"><p class='errorMessage'><img class="errorMessageWarning" src="../images/warning.svg" /> Invalid login, please try again</p></span>
+                    <label for="usernameInput">Username</label>
+                    <input id="usernameInput" type="text" name="username" required>
+                </div>
+
+                <div id="password">
+                    <span class="errorLogin"><p class='errorMessage'><img class="errorMessageWarning" src="../images/warning.svg" /> Invalid login, please try again</p></span>
+                    <!-- <p class='errorMessage'><img class="errorMessageWarning" src="../images/warning.svg" /> Invalid login, please try again</p> -->
+                    <label for="passwordInput">Password</label>
+                    <input id="passwordInput" type="password" name="password" required>
+                </div>
+
+
+
+                <div>
+                    <input id="remember" type="checkbox" name="remember" value="rememberUsername">
+                    <label for="remember">Remember username</label>
+                </div>
+                <div>
+                    <button id="logInButton">Log in</button>
+                </div>
+                <div>
+                    <a href="../html/forgottenPassword.html">Forgotten your username or password?</a>
+                </div>
+
+                <div>Cookes must be enabled in your browser
+                    <a href="../html/cookies.html"><img src="../images/question mark.svg"></a>
+                </div>
+            </div>
+
+            <div id="signUpPanel">
+                <h2>Is this your first time here?</h2>
+                <div id="introParagraph">
+                    Hi! For full access to courses you'll need to take a minute to create a new account for yourself on this web site. Each of the individual courses may also have a one-time "enrolment key", which you won't need until later. Here are the steps:
+                    <ol>
+                        <li>Fill out the <a href="../html/signup.html">New Account</a> form with your details.</li>
+                        <li>An email will be immediately sent to your email address.</li>
+                        <li>Read your email, and click on the web link it contains.</li>
+                        <li>Your account will be confirmed and you will be logged in.</li>
+                        <li>Now, select the course you want to participate in.</li>
+                        <li>If you are prompted for an "enrolment key" - use the one that your teacher has given you. This will "enrol" you in the course.
+                        </li>
+                        <li>You can now access the full course. From now on you will only need to enter your personal username and password (in the form on this page) to log in and access any course you have enrolled in.</li>
+                    </ol>
+                </div>
+                <div>
+                    <!-- button used as a link to signup.html-->
+                    <button id="createNewAccount" onclick="window.location.href='../html/signup.html'">Create new
+                        account</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+
+    <footer>
+        <div class="footerLogInContainer">You are not logged in.
+        </div>
+
+        <div class="home">
+            <a title="Home" href="/index.html">Home</a>
+
+    </footer>
+
+    </div>
+    <script src="../js/userStorage.js"></script>
+    <script src="../js/login.js"></script>
+
+</body>
+
+</html>
