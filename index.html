@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Moodle</title>
+    <title>Moodle</title>    
+    <link rel="shortcut icon" href="http://moodle.ittalents.bg/theme/image.php/more/theme/1460374795/favicon">    
+    <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
     <link rel="stylesheet" href="assets/styles/reset.css" />
     <link rel="stylesheet" href="assets/styles/styles.css" />
-    <link rel="shortcut icon" href="http://moodle.ittalents.bg/theme/image.php/more/theme/1460374795/favicon">
-    <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
     <script src="./js/index.js"></script>
 </head>
 
@@ -18,13 +18,14 @@
 
     <!-- first Header / fixed -->
     <header class="firstHeader">
-
-        <div class="brandContainer">
-            <a href="">IT Talents Training Camp</a>
-        </div>
-        <!-- Login page -->
-        <div class="logInContainer">You are not logged in. (
-            <a href="/html/login.html">Log in</a>)
+        <div class="top-container">
+            <div class="brandContainer">
+                <a href="">IT Talents Training Camp</a>
+            </div>
+            <!-- Login page -->
+            <div class="logInContainer">You are not logged in. (
+                <a href="/html/login.html">Log in</a>)
+            </div>
         </div>
     </header>
     <!-- container page -->
@@ -37,69 +38,73 @@
     </header>
 
     <div class="wrapper">
-        <div class="regionMainContainer">
-            <div class="leftBox">
-                <article class="blockMainMenu">
-                    <h2>MAIN MENU</h2>
-                    <ul>
-                        <li>
-                            <img class="icons" src="http://moodle.ittalents.bg/theme/image.php/more/forum/1460374795/icon">
-                            <a href="">Site news</a>
-                        </li>
-                    </ul>
-                </article>
-                <article class="blockMainMenu blockNavigationMenu">
-                    <h2>NAVIGATION</h2>
-                    <ul>
-                        <li>
-                            <p>
-                                <a href="">Home</a>
-                            </p>
-                        </li>
-                        <li>
-                            <img class="icons" src="http://moodle.ittalents.bg/theme/image.php/more/forum/1460374795/icon">
-                            <a href="">Site news</a>
-                        </li>
-                        <li>
-                            <a href="" class="collapsible">Courses</a>
-                        </li>
-                    </ul>
-                    <ul>
-
-
-                    </ul>
-                </article>
-            </div>
-
-            <main class="middleContainer">
-                <h2>Available courses</h2>
-                <div class="courseBox">
-                    <img class="icons" src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/i/course">
-                    <a href="">JavaScript Season 10</a>
-                </div>
-            </main>
-        </div>
-        <!-- za kalendar -->
-        <div class="calendar-box">
-            <div id="demo" class= "yui3-skin-sam yui3-g" >
-                <!-- You need this skin class -->
-
-                <div id="leftcolumn" class="yui3-u" >
-                    <!-- Container for the calendar -->
-                    <div id="mycalendar"></div>
-                </div>
-                <!-- <div id="rightcolumn" class="yui3-u">
-                    <div id="links" style="padding-left:20px;">
-                        
-                        <button id="togglePrevMonth" class="yui3-button">Toggle Previous Month's Dates</button>
-                        <br>
-                        <button id="toggleNextMonth" class="yui3-button">Toggle Next Month's Dates</button>
-                        <br> Selected date:
-                        <span id="selecteddate"></span>
+       
+            <div class="regionMainContainer">
+                    <div class="leftBox">
+                        <article class="blockMainMenu">
+                            <h2>MAIN MENU</h2>
+                            <ul>
+                                <li>
+                                    <img class="icons" src="http://moodle.ittalents.bg/theme/image.php/more/forum/1460374795/icon">
+                                    <a href="">Site news</a>
+                                </li>
+                            </ul>
+                        </article>
+                        <article class="blockMainMenu blockNavigationMenu">
+                            <h2>NAVIGATION</h2>
+                            <ul>
+                                <li>
+                                    <p>
+                                        <a href="">Home</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <img class="icons" src="http://moodle.ittalents.bg/theme/image.php/more/forum/1460374795/icon">
+                                    <a href="">Site news</a>
+                                </li>
+                                <li>
+                                    <a href="" class="collapsible">Courses</a>
+                                </li>
+                            </ul>
+                            <ul>
+        
+        
+                            </ul>
+                        </article>
                     </div>
-                </div> -->
-            </div>
-        </div>
+        
+                    <main class="middleContainer">
+                        <h2>Available courses</h2>
+                        <div class="courseBox">
+                            <img class="icons" src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/i/course">
+                            <a href="">JavaScript Season 10</a>
+                        </div>
+                    </main>
+                </div>
+                <!-- za kalendar -->
+                <div class="calendar-box .yui3-skin-sam .yui3-calendarnav-prevmonth" >
+                    
+                    <div id="demo" class= "yui3-skin-sam yui3-g " >
+                        <!-- You need this skin class -->
+                        
+                        <div id="leftcolumn" class="yui3-u" >
+                            <!-- Container for the calendar -->
+                            <div id="mycalendar"></div>
+                        </div>
+                        <!-- <div id="rightcolumn" class="yui3-u">
+                            <div id="links" style="padding-left:20px;">
+                                
+                                <button id="togglePrevMonth" class="yui3-button">Toggle Previous Month's Dates</button>
+                                <br>
+                                <button id="toggleNextMonth" class="yui3-button">Toggle Next Month's Dates</button>
+                                <br> Selected date:
+                                <span id="selecteddate"></span>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+       
+        
 
         <footer>
             <div class="footerLogInContainer">You are not logged in. (
