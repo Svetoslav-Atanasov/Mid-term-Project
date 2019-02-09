@@ -1,40 +1,87 @@
-/* basic */
-
-html * {
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    box-sizing: border-box;
-}
-
-body {
-    background-image: url(../images/background.jpg);
-    font-size: 14px;
-}
-
-
-/* cookies page */
-
-#cookiesHeader {
-    color: #333366;
-    font-size: 32px;
-    font-weight: bolder;
-    margin: 20px 0;
-}
-
-#cookiesWrapper {
-    max-width: 1700px;
-    margin-top: 100px !important;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 4px;
-    font-size: 14px;
-    line-height: 20px;
-    color: #336;
-    background-color: #fff;
-    padding: 20px 25px;
-    text-align: left;
-}
-
-#cookiesInfo>p {
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
+                                                                    /* basic */
+                                                                
+                                                                html * {
+                                                                    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                                                                    box-sizing: border-box;
+                                                                }
+                                                                
+                                                                body {
+                                                                    background-image: url(../images/background.jpg);
+                                                                    font-size: 14px;
+                                                                }
+                                                                /* cookies page */
+                                                                
+                                                                #cookiesHeader {
+                                                                    color: #333366;
+                                                                    font-size: 32px;
+                                                                    font-weight: bolder;
+                                                                    margin: 20px 0;
+                                                                }
+                                                                
+                                                                #cookiesWrapper {
+                                                                    max-width: 1700px;
+                                                                    margin-top: 100px !important;
+                                                                    margin-left: auto;
+                                                                    margin-right: auto;
+                                                                    border-radius: 4px;
+                                                                    font-size: 14px;
+                                                                    line-height: 20px;
+                                                                    color: #336;
+                                                                    background-color: #fff;
+                                                                    padding: 20px 25px;
+                                                                    text-align: left;
+                                                                }
+                                                                
+                                                                #cookiesInfo>p {
+                                                                    padding-top: 5px;
+                                                                    padding-bottom: 5px;
+                                                                }
+                                                                /* DEVICES */
+                                                                /* iPad Pro */
+                                                                
+                                                                @media only screen and (max-width: 1366px) {
+                                                                    #cookiesWrapper {
+                                                                        max-width: 1177px !important;
+                                                                    }
+                                                                    @media only screen and (max-width: 1024px) {
+                                                                        #cookiesWrapper {
+                                                                            max-width: 700px !important;
+                                                                        }
+                                                                        h1 {
+                                                                            font-size: 20px !important;
+                                                                        }
+                                                                    }
+                                                                    @media only screen and (max-width: 812px) {
+                                                                        #cookiesWrapper {
+                                                                            max-width: 350px;
+                                                                        }
+                                                                        h1 {
+                                                                            font-size: 22px;
+                                                                        }
+                                                                        h2 {
+                                                                            font-size: 18px !important;
+                                                                        }
+                                                                        #introParagraph {
+                                                                            font-size: 12px !important;
+                                                                        }
+                                                                    }
+                                                                    @media only screen and (max-width: 568px) {
+                                                                        #cookiesWrapper {
+                                                                            max-width: 300px !important;
+                                                                        }
+                                                                        h1 {
+                                                                            font-size: 18px;
+                                                                        }
+                                                                        h2 {
+                                                                            font-size: 12px !important;
+                                                                        }
+                                                                        #introParagraph {
+                                                                            font-size: 10px !important;
+                                                                        }
+                                                                        .brandContainer {
+                                                                            font-size: 18px;
+                                                                        }
+                                                                        .logInContainer {
+                                                                            display: none;
+                                                                        }
+                                                                    }
