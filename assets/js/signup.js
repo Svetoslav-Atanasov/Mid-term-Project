@@ -170,9 +170,19 @@ window.addEventListener('DOMContentLoaded', function() {
             hasErrors = true;
             // message for username that does not meet the requirements            
             document.querySelectorAll('.signupErrorMessageChoose')[0].style.display = 'inline'
+            byId('existingUsername').style.display = 'none';
+
         } else {
             // if you try 2 times in a row the message from above won't go away
             document.querySelectorAll('.signupErrorMessageChoose')[0].style.display = 'none'
+
+            // check if username already exists
+            if (userStorage.checkIfUserExists(username)) {
+                byId('existingUsername').style.display = 'inline';
+            } else {
+                byId('existingUsername').style.display = 'none';
+            }
+
         }
 
         var firstPasswordError = false;

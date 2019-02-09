@@ -59,7 +59,7 @@ var userStorage = (function() {
             localStorage.setItem('userList', JSON.stringify(userList));
         },
 
-        // checks if there is a user in the DB - userList
+        // checks if there are any users in the DB - userList
 
         login: function(username, password) {
             var userListFromLocalStorage = localStorage.getItem('userList');
@@ -69,6 +69,15 @@ var userStorage = (function() {
 
             return userList.find(user => user.username === username &&
                 user.password === password);
+        },
+
+        checkIfUserExists: function(username) {
+            var userListFromLocalStorage = localStorage.getItem('userList');
+            if (userListFromLocalStorage) {
+                userList = JSON.parse(userListFromLocalStorage);
+            }
+
+            return userList.find(user => user.username === username);
         }
     }
 
