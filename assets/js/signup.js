@@ -149,8 +149,7 @@ window.addEventListener('DOMContentLoaded', function () {
         //to be able to use register and than get the message - congrats... 
         event.preventDefault();
         // all fields needed to register: username, password, email, emailAgain, firstName, surname, city, country
-
-        // getElement by id - look for IDs
+        // getElement by id
         let username = byId('usernameInput').value;
         let password = byId('passwordInput').value;
         let email = byId('emailInput').value;
@@ -163,36 +162,90 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
         // flag - to see if there are any mistakes in the registration attempt
-        // ADD VALIDATION
-        let hasErrors = true;
+        //VALIDATION
+        let hasErrors = false;
 
-        // as userStorage is put above userController it becomes like a global variable and you can access it            //hide something, show something else
-        // if (username.trim().length <= 8) {
-        //     let hasErrors = false;
-        //     // message for username that does not meet the requirements
-        //     document.querySelector('#usernameContainer > .error').innerText = 'Username must be at least 8 characters long';
-        // } else {
-        //     // no message if username meets requirements
-        //     document.querySelector('#usernameContainer > .error').innerText = '';
-        // }
+        // // as userStorage is put above userController it becomes like a global variable and you can access it           
+        if (username.trim().length < 1) {
+            hasErrors = true;
+            // message for username that does not meet the requirements
+            document.querySelectorAll('.signupErrorMessageChoose')[0].style.display = 'inline'
+        } else {
+            // if you try 2 times in a row the message from above won't go away
+            document.querySelectorAll('.signupErrorMessageChoose')[0].style.display = 'none'
+        }
 
-        // if (password.trim().length <= 5) {
-        //     let hasErrors = false;
-        //     // message for username that does not meet the requirements
-        //     document.querySelector('#passwordContainer > .error').innerText = 'Password must be at least 5 characters long';
-        // } else {
-        //     // no message if username meets requirements
-        //     document.querySelector('#passwordContainer > .error').innerText = '';
-        // }
+        if (password.trim().length <= 8) {
+            hasErrors = true;
+            document.querySelector('#choosePassword8').style.display = 'inline';
+        } else {
+            document.querySelector('#choosePassword8').style.display = 'none';
+        }
+
+        if (!(/[A-Z]+/.test(password))) {
+            hasErrors = true;
+            document.querySelector('#choosePasswordUc').style.display = 'inline';
+        } else {
+            document.querySelector('#choosePasswordUc').style.display = 'none';
+        }
+
+        if (!(/[a-z]+/.test(password))) {
+            hasErrors = true;
+            document.querySelector('#choosePasswordLc').style.display = 'inline';
+        } else {
+            document.querySelector('#choosePasswordLc').style.display = 'none';
+        }
+
+        if (!(/[0-9]+/.test(password))) {
+            hasErrors = true;
+            document.querySelector('#choosePasswordDigit').style.display = 'inline';
+        } else {
+            document.querySelector('#choosePasswordDigit').style.display = 'none';
+        }
+
+        if (!(/[^A-Za-z0-9]+/.test(password))) {
+            hasErrors = true;
+            document.querySelector('#choosePasswordSpecialCharacter').style.display = 'inline';
+        } else {
+            document.querySelector('#choosePasswordSpecialCharacter').style.display = 'none';
+        }
+
+
+        function validatePassword(password) {
+            return /[A-Z]/.test(password) &&
+                /[a-z]/.test(password) &&
+                /[0-9]/.test(password) &&
+                /[^A-Za-z0-9]/.test(password) &&
+                password.length >= 8;
+
+        }
 
         if (!validateEmail(email)) {
-            let hasErrors = false;
-            // message for username that does not meet the requirements
-            document.querySelector('#email > .signupErrorMessage').innerText = 'Invalid email address';
-            document.querySelector('.signupErrorMessage').style.display = 'block'
+            hasErrors = true;
+            // document.querySelector('#email > .signupErrorMessage').innerText = 'Invalid email address';
+            document.querySelectorAll('.signupErrorMessageMoreDetails')[0].style.display = 'inline'
         } else {
-            // no message if username meets requirements
-            document.querySelector('#emailInput > .signupErrorMessage').innerText = '';
+            document.querySelectorAll('.signupErrorMessageMoreDetails')[0].style.display = 'none'
+        }
+
+        if (!validateEmail(emailAgain)) {
+            let hasErrors = true;
+            document.querySelectorAll('.signupErrorMessageMoreDetails')[1].style.display = 'inline'
+        } else {
+            document.querySelectorAll('.signupErrorMessageMoreDetails')[0].style.display = 'none'
+        }
+        // else {
+        //     // no message if username meets requirements
+        //     document.querySelector('#emailInput > .signupErrorMessage').innerText = '';
+        // }
+
+        if (email !== emailAgain) {
+            let hasErrors = true;
+            document.querySelectorAll('.signupErrorMessageMoreDetails')[0].style.display = 'inline'
+            document.querySelectorAll('.signupErrorMessageMoreDetails')[1].style.display = 'inline'
+        } else {
+            document.querySelectorAll('.signupErrorMessageMoreDetails')[0].style.display = 'none'
+            document.querySelectorAll('.signupErrorMessageMoreDetails')[1].style.display = 'none'
         }
 
         // validate mail; can put it down here, because of hoisting
@@ -200,6 +253,29 @@ window.addEventListener('DOMContentLoaded', function () {
             var validation = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return validation.test(String(email).toLowerCase());
         };
+
+        if (firstName.trim().length < 1) {
+            hasErrors = true;
+            document.querySelectorAll('.signupErrorMessageMoreDetails')[2].style.display = 'inline'
+        } else {
+            document.querySelectorAll('.signupErrorMessageMoreDetails')[2].style.display = 'none'
+        }
+
+        if (surname.trim().length < 1) {
+            hasErrors = true;
+            document.querySelectorAll('.signupErrorMessageMoreDetails')[3].style.display = 'inline'
+        } else {
+            document.querySelectorAll('.signupErrorMessageMoreDetails')[3].style.display = 'none'
+        }
+        // longest city name is:  Winchester-on-the-Severn - 24 characters including hyphens
+        if (city.trim().length > 24) {
+            city = '';
+        }
+        // if no country is selected
+        if (country === 'Select a country') {
+            country = '';
+        }
+        console.log(hasErrors)
 
         if (!hasErrors) {
             userStorage.register(username, password, email, emailAgain, firstName, surname, city, country);

@@ -410,8 +410,8 @@ h3 {
 
 /* error messages */
 
-.signupErrorMessage {
-    /* display: none; */
+.signupErrorMessageChoose {
+    display: none;
     border: 1px solid #eed3d7;
     border-radius: 4px;
     background-color: #f2dede;
@@ -420,10 +420,19 @@ h3 {
     color: #b94a48;
     text-align: left;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 5.7vh;
+    margin-left: 250px;
 }
 
-    
-.errorMessageWarning {
-    /* display: none; */
+.signupErrorMessageMoreDetails {
+    display: none;
+    border: 1px solid #eed3d7;
+    border-radius: 4px;
+    background-color: #f2dede;
+    padding: 4px;
+    margin-bottom: 4px;
+    color: #b94a48;
+    text-align: left;
+    font-size: 14px;
+    margin-left: 250px;
 }
