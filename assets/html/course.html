@@ -8,8 +8,9 @@
     <title>JS Season X</title>
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../styles/course.css">
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <link rel="shortcut icon" href="http://moodle.ittalents.bg/theme/image.php/more/theme/1460374795/favicon">
-
+    <script src="../js/course.js"></script>
 </head>
 
 <body>
@@ -21,7 +22,7 @@
         </div>
         <!-- Login page -->
         <div class="logInContainer">You are not logged in. (
-            <a href="/html/login.html">Log in</a>)
+            <a href="../html/login.html">Log in</a>)
         </div>
     </header>
 
@@ -34,29 +35,28 @@
     <div class="wrapper">
 
         <div class="leftBox">
-            <article style="width: 80%; height: 5vh" class="blockMainMenu">
-                <nav id="navv">
+            <article style="width: 60%; height: 5vh" class="blockMainMenu">
+                <nav>
                     <ul id="courseNav">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="triangle"><a href="http://">JS Season X</a></li>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="http://"><span class="arrow">►</span>JS Season X</a></li>
                     </ul>
                 </nav>
             </article>
             <article class="blockMainMenu blockNavigationMenu">
                 <h2 id="hyperHome">NAVIGATION</h2>
-                <a id="hyperHome" href="">Home</a>
+                <a id="hyperHome" href="../../index.html">Home</a>
                 <ul>
-                    <li class="square"><a href="http://">Dashboard</a></li>
-                    <li class="triangle">Site pages</li>
-                    <li class="triangle">Current course</li>
-                    <li class="triangle">My courses</li>
+                    <li><a href="http://"><img class="" src="../images/navigationitem.svg"><span class="navMenu">Dashboard</span></a></li>
+                    <li id="drop1"><img id="rotate1" src="../images/collapsed.svg"><span class="navMenu">Site pages</span><li id="hidden1"><a href=""><img src="../images/collapsed.svg">Home</a></li></li>
+                    <li id="drop2"><img id="rotate2" src="../images/collapsed.svg"><span class="navMenu">My courses</span><li id="hidden2"><a href=""><img src="../images/collapsed.svg">JS Season X</a></li></li>
                 </ul>
             </article>
             <article class="blockMainMenu blockMainMenu2">
                 <h2 id="hyperHome">ADMINISTRATION</h2>
                 <nav>
                     <ul>
-                        <li class="triangle">Course administration</li>
+                        <li><img src="../images/collapsed.svg">Course administration</li>
                     </ul>
                 </nav>
             </article>
