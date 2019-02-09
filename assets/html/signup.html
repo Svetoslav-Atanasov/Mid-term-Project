@@ -46,15 +46,21 @@
             </div>
             <!-- username and password are collapsable together -->
 
-            <h3 id="menuExpand1"><img id="arrowDown1" src="/assets/images/arrowDown.png" />Choose you username and password
+            <h3 id="menuExpand1"><img id="arrowDown1" src="/assets/images/arrowDown.png" />Choose you username and
+                password
             </h3>
             <div id="collapse1">
                 <div id="username">
+                    <span class="errorLogin">
+                        <!-- <p class='signupErrorMessage'></p> -->
+                    </span>
                     <label for="usernameInput">Username<img class="requiredStar" src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/req"
                             title="Required field" /></label>
                     <input id="usernameInput" type="text" name="username">
                 </div>
-                <div id="passwordRequirements">The password must have at least 8 characters, at least 1 digit(s), at least 1 lower case letter(s), at least 1 upper case letter(s), at least 1 non-alphanumeric character(s) such as as *, -, or #</div>
+                <div id="passwordRequirements">The password must have at least 8 characters, at least 1 digit(s), at
+                    least 1 lower case letter(s), at least 1 upper case letter(s), at least 1 non-alphanumeric
+                    character(s) such as as *, -, or #</div>
 
                 <div id="password">
                     <label for="passwordInput">Password<img class="requiredStar" src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/req"
@@ -74,6 +80,7 @@
                 <div id="email">
                     <label for="emailInput">Email address<img class="requiredStar" src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/req"
                             title="Required field" /></label>
+                    <!-- <span class='signupErrorMessage'>Invalid email address</span><br/> -->
                     <input id="emailInput" type="email" name="email">
                 </div>
 

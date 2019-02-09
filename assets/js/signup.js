@@ -20,7 +20,7 @@ const byId = (id) => document.getElementById(id);
 
 var expanded0 = true;
 
-byId('arrowDown0').addEventListener('click', function() {
+byId('arrowDown0').addEventListener('click', function () {
 
     if (expanded0) {
         byId('collapse1').style.display = 'none';
@@ -44,7 +44,7 @@ byId('arrowDown0').addEventListener('click', function() {
 
 var menuExpanded0 = true;
 
-byId('menuExpand0').addEventListener('click', function() {
+byId('menuExpand0').addEventListener('click', function () {
 
     if (menuExpanded0) {
         byId('collapse1').style.display = 'none';
@@ -69,7 +69,7 @@ byId('menuExpand0').addEventListener('click', function() {
 
 var expanded1 = true;
 
-byId('arrowDown1').addEventListener('click', function() {
+byId('arrowDown1').addEventListener('click', function () {
 
     if (expanded1) {
         byId('collapse1').style.display = 'none';
@@ -84,7 +84,7 @@ byId('arrowDown1').addEventListener('click', function() {
 
 var menuexpanded1 = true;
 
-byId('menuExpand1').addEventListener('click', function() {
+byId('menuExpand1').addEventListener('click', function () {
 
     if (menuexpanded1) {
         byId('collapse1').style.display = 'none';
@@ -101,7 +101,7 @@ byId('menuExpand1').addEventListener('click', function() {
 
 
 var expanded2 = true;
-byId('arrowDown2').addEventListener('click', function() {
+byId('arrowDown2').addEventListener('click', function () {
 
     if (expanded2) {
         byId('collapse2').style.display = 'none';
@@ -117,7 +117,7 @@ byId('arrowDown2').addEventListener('click', function() {
 
 var menuexpanded2 = true;
 
-byId('menuExpand2').addEventListener('click', function() {
+byId('menuExpand2').addEventListener('click', function () {
 
     if (menuexpanded2) {
         byId('collapse2').style.display = 'none';
@@ -134,7 +134,7 @@ byId('menuExpand2').addEventListener('click', function() {
 
 // $(function() {
 
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('DOMContentLoaded', function () {
 
     // template for not always writing document.getElementById
     // const byId = (id) => document.getElementById(id);
@@ -145,7 +145,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     // });
 
-    byId('createMyNewAccountButton').addEventListener('click', function() {
+    byId('createMyNewAccountButton').addEventListener('click', function () {
         //to be able to use register and than get the message - congrats... 
         event.preventDefault();
         // all fields needed to register: username, password, email, emailAgain, firstName, surname, city, country
@@ -164,13 +164,13 @@ window.addEventListener('DOMContentLoaded', function() {
 
         // flag - to see if there are any mistakes in the registration attempt
         // ADD VALIDATION
-        let hasErrors = false;
+        let hasErrors = true;
 
-        // // as userStorage is put above userController it becomes like a global variable and you can access it            //hide something, show something else
-        // if (username.trim().length <= 5) {
+        // as userStorage is put above userController it becomes like a global variable and you can access it            //hide something, show something else
+        // if (username.trim().length <= 8) {
         //     let hasErrors = false;
         //     // message for username that does not meet the requirements
-        //     document.querySelector('#usernameContainer > .error').innerText = 'Username must be at least 5 characters long';
+        //     document.querySelector('#usernameContainer > .error').innerText = 'Username must be at least 8 characters long';
         // } else {
         //     // no message if username meets requirements
         //     document.querySelector('#usernameContainer > .error').innerText = '';
@@ -185,14 +185,21 @@ window.addEventListener('DOMContentLoaded', function() {
         //     document.querySelector('#passwordContainer > .error').innerText = '';
         // }
 
-        // if (!validateEmail(email)) {
-        //     let hasErrors = false;
-        //     // message for username that does not meet the requirements
-        //     document.querySelector('#emailContainer > .error').innerText = 'Please, input a valid email address';
-        // } else {
-        //     // no message if username meets requirements
-        //     document.querySelector('#emailContainer > .error').innerText = '';
-        // }
+        if (!validateEmail(email)) {
+            let hasErrors = false;
+            // message for username that does not meet the requirements
+            document.querySelector('#email > .signupErrorMessage').innerText = 'Invalid email address';
+            document.querySelector('.signupErrorMessage').style.display = 'block'
+        } else {
+            // no message if username meets requirements
+            document.querySelector('#emailInput > .signupErrorMessage').innerText = '';
+        }
+
+        // validate mail; can put it down here, because of hoisting
+        function validateEmail(email) {
+            var validation = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return validation.test(String(email).toLowerCase());
+        };
 
         if (!hasErrors) {
             userStorage.register(username, password, email, emailAgain, firstName, surname, city, country);
@@ -200,8 +207,3 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     }, false);
 });
-// validate mail; can put it down here, because of hoisting
-// function validateEmail(email) {
-//     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-//     return re.test(String(email).toLowerCase());
-// };

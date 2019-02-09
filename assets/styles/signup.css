@@ -407,3 +407,23 @@ h3 {
 #collapse0 {
     float: right;
 }
+
+/* error messages */
+
+.signupErrorMessage {
+    /* display: none; */
+    border: 1px solid #eed3d7;
+    border-radius: 4px;
+    background-color: #f2dede;
+    padding: 4px;
+    margin-bottom: 4px;
+    color: #b94a48;
+    text-align: left;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+    
+.errorMessageWarning {
+    /* display: none; */
+}

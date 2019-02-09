@@ -246,7 +246,8 @@
         font-size: 14px;
         line-height: 45px;
     }
-    
-    .errorMessageWarning {
-        /* display: none; */
+
+
+    .allignCenter {
+        text-align: center;
     }

@@ -11,13 +11,13 @@
         const password = byId('passwordInput').value;
 
         const user = userStorage.login(username, password);
+        // check the username, password input
         console.log(user)
-        if (user) {
+        //checks userList for username, password and if the inputs are empty fields
+        if (user && username.trim().length >= 0 && password.trim().length >= 8) {
             document.location.href = '../html/course.html'
         } else {
-            // document.querySelector('.errorMessage').innerText = 'Invalid login, please try again';
-            // document.querySelector('.errorMessage').style.display = 'block';
-            // document.querySelector('.errorMessageWarning').style.display = 'block';
+            // finds the first element of that class and displays the error message
             document.querySelector('.errorLogin').style.display = 'block'
         }
     }, false);
