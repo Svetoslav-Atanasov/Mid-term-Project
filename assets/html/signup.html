@@ -46,14 +46,14 @@
             </div>
             <!-- username and password are collapsable together -->
 
-            <h3 id="menuExpand1"><img id="arrowDown1" src="/assets/images/arrowDown.png" />Choose you username and
+            <h3 id="menuExpand1"><img id="arrowDown1" src="/assets/images/arrowDown.png" />Choose your username and
                 password
             </h3>
             <div id="collapse1">
                 <div id="username">
-                    <span class="errorLogin">
-                        <!-- <p class='signupErrorMessage'></p> -->
-                    </span>
+                    <div>
+                        <span class='signupErrorMessageChoose'>Missing username</span>
+                    </div>
                     <label for="usernameInput">Username<img class="requiredStar" src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/req"
                             title="Required field" /></label>
                     <input id="usernameInput" type="text" name="username">
@@ -63,6 +63,14 @@
                     character(s) such as as *, -, or #</div>
 
                 <div id="password">
+                    <div>
+                        <span class='signupErrorMessageChoose' id="choosePassword8">Passwords must be at least 8 characters long.</span>
+                        <span class='signupErrorMessageChoose' id="choosePasswordUc"><br>Passwords must have at least 1 upper case letter(s).</span>
+                        <span class='signupErrorMessageChoose' id="choosePasswordLc"><br>Passwords must have at least 1 lower case letter(s).</span>
+                        <span class='signupErrorMessageChoose' id="choosePasswordDigit"><br>Passwords must have at least 1 digit(s).</span>
+                        <span class='signupErrorMessageChoose' id="choosePasswordSpecialCharacter"><br>Passwords must have at least 1 special character(s).</span>
+
+                    </div>
                     <label for="passwordInput">Password<img class="requiredStar" src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/req"
                             title="Required field" /></label>
                     <input id="passwordInput" type="password" name="password">
@@ -78,25 +86,37 @@
             <h3 id="menuExpand2"><img id="arrowDown2" src="/assets/images/arrowDown.png" />More details</h3>
             <div id="collapse2">
                 <div id="email">
+                    <div>
+                        <span class='signupErrorMessageMoreDetails'>Invalid email address</span>
+                    </div>
                     <label for="emailInput">Email address<img class="requiredStar" src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/req"
                             title="Required field" /></label>
-                    <!-- <span class='signupErrorMessage'>Invalid email address</span><br/> -->
+
                     <input id="emailInput" type="email" name="email">
                 </div>
 
                 <div id="emailAgain">
+                    <div>
+                        <span class='signupErrorMessageMoreDetails'>Invalid email address</span>
+                    </div>
                     <label for="emailAgainInput">Email (again)<img class="requiredStar" src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/req"
                             title="Required field" /></label>
                     <input id="emailAgainInput" type="email" name="email again">
                 </div>
 
                 <div id="firstName">
+                    <div>
+                        <span class='signupErrorMessageMoreDetails'>Missing given name</span>
+                    </div>
                     <label for="firstNameInput">First Name<img class="requiredStar" src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/req"
                             title="Required field" /></label>
                     <input id="firstNameInput" type="text" name="first name">
                 </div>
 
                 <div id="surname">
+                    <div>
+                        <span class='signupErrorMessageMoreDetails'>Missing surname</span>
+                    </div>
                     <label for="surnameInput">Surname<img class="requiredStar" src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/req"
                             title="Required field" /></label>
                     <input id="surnameInput" type="text" name="surname">
