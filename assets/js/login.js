@@ -3,7 +3,8 @@
     //Login form creation
     const byId = (id) => document.getElementById(id);
 
-
+    userStorage.init();
+    
     byId('logInButton').addEventListener('click', function(event) {
         event.preventDefault();
 
@@ -15,9 +16,16 @@
         console.log(user)
         //checks userList for username, password and if the inputs are empty fields
         if (user && username.trim().length >= 0 && password.trim().length >= 8) {
-            document.location.href = '../html/course.html'
+            document.location.href = '../html/userTemplate.html'
         } else {
             // finds the first element of that class and displays the error message
             document.querySelector('.errorLogin').style.display = 'block'
         }
     }, false);
+
+        /////////////////////////////////////////////////////////////////////////////////
+
+
+
+  
+ 
