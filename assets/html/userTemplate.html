@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../styles/styles.css" />
     <link rel="shortcut icon" href="http://moodle.ittalents.bg/theme/image.php/more/theme/1460374795/favicon">
+    <script src = "/node_modules/jquery/dist/jquery.min.js"></script>
   
 
     
@@ -37,7 +38,7 @@
     <!-- second header -->
     <header>
         <div class="nameContainer">
-            <h1>IT Talents Moodle</h1>
+            <h1 id = 'titleCourse'>IT Talents Moodle</h1>
         </div>
     </header>
 
@@ -80,22 +81,31 @@
                 <h2>Available courses</h2>
                 <div class="courseBox">
                     <img class="icons" src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/i/course">
-                    <a href="">JavaScript Season 10</a>
+                    <a id = 'courseName'href="">JavaScript Season 10</a>
                 </div>
             </main>
         </div>       
-        
-        <div class="lastest-news-container">
-            <h2>LASTEST NEWS</h2>
-            <div class="news-info">
-                <p>There are no upcoming events</p>
+        <div class="left-containers">
+            <div class="lastest-news-container">
+                <h2 class="styles-h2">LASTEST NEWS</h2>
+                <div class="news-info">
+                    <p>There are no upcoming events</p>
+                </div>
+                <a href="index.html">go to home</a>
             </div>
-            <a href="index.html">go to home</a>
+
+            <main id="adminMainContainer" class="admin-main-container lastest-news-container" >
+                <h2 class="styles-h2" > ADMIN STUFF</h2>
+                <button id="showListStudent" class="styles-btn">show list student</button>
+                <button id="showListCourses" class="styles-btn">show courses</button>
+                <ul id="listStudent" class="list-student">
+                </ul>
+                <ul id="listCourses" class="list-student" ></ul>
+            </main>
         </div>
 
-<main id="adminMainContainer" class="admin-main-container" >
-    ti si admin
-</main>
+
+
         <footer>
             <div class="footerLogInContainer">You are not logged in. (
 

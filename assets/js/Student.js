@@ -11,4 +11,7 @@ class Student extends User {
         // i.e. JavaScript Season X, PHP Season X, etc.
         this.course = null;
     }
+    addCourse (someCourse) {
+        this.course = someCourse
+    }
 }
