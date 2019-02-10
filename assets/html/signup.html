@@ -46,29 +46,29 @@
             </div>
             <!-- username and password are collapsable together -->
 
-            <h3 id="menuExpand1"><img id="arrowDown1" src="/assets/images/arrowDown.png" />Choose your username and
-                password
+            <h3 id="menuExpand1"><img id="arrowDown1" src="/assets/images/arrowDown.png" />Choose your username and password
             </h3>
             <div id="collapse1">
                 <div id="username">
                     <div>
                         <span class='signupErrorMessageChoose'>Missing username</span>
                     </div>
+                    <div>
+                        <span class='signupErrorMessageChoose' id="existingUsername">The username already exist, choose another</span>
+                    </div>
                     <label for="usernameInput">Username<img class="requiredStar" src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/req"
                             title="Required field" /></label>
                     <input id="usernameInput" type="text" name="username">
                 </div>
-                <div id="passwordRequirements">The password must have at least 8 characters, at least 1 digit(s), at
-                    least 1 lower case letter(s), at least 1 upper case letter(s), at least 1 non-alphanumeric
-                    character(s) such as as *, -, or #</div>
+                <div id="passwordRequirements">The password must have at least 8 characters, at least 1 digit(s), at least 1 lower case letter(s), at least 1 upper case letter(s), at least 1 non-alphanumeric character(s) such as as *, -, or #</div>
 
                 <div id="password">
                     <div>
                         <span class='signupErrorMessageChoose' id="choosePassword8">Passwords must be at least 8 characters long.</span>
-                        <span class='signupErrorMessageChoose' id="choosePasswordUc"><br>Passwords must have at least 1 upper case letter(s).</span>
-                        <span class='signupErrorMessageChoose' id="choosePasswordLc"><br>Passwords must have at least 1 lower case letter(s).</span>
-                        <span class='signupErrorMessageChoose' id="choosePasswordDigit"><br>Passwords must have at least 1 digit(s).</span>
-                        <span class='signupErrorMessageChoose' id="choosePasswordSpecialCharacter"><br>Passwords must have at least 1 special character(s).</span>
+                        <span class='signupErrorMessageChoose' id="choosePasswordUc"></span>
+                        <span class='signupErrorMessageChoose' id="choosePasswordLc"></span>
+                        <span class='signupErrorMessageChoose' id="choosePasswordDigit"></span>
+                        <span class='signupErrorMessageChoose' id="choosePasswordSpecialCharacter"></span>
 
                     </div>
                     <label for="passwordInput">Password<img class="requiredStar" src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/req"

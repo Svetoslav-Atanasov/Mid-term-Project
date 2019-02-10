@@ -20,7 +20,7 @@ const byId = (id) => document.getElementById(id);
 
 var expanded0 = true;
 
-byId('arrowDown0').addEventListener('click', function () {
+byId('arrowDown0').addEventListener('click', function() {
 
     if (expanded0) {
         byId('collapse1').style.display = 'none';
@@ -44,7 +44,7 @@ byId('arrowDown0').addEventListener('click', function () {
 
 var menuExpanded0 = true;
 
-byId('menuExpand0').addEventListener('click', function () {
+byId('menuExpand0').addEventListener('click', function() {
 
     if (menuExpanded0) {
         byId('collapse1').style.display = 'none';
@@ -69,7 +69,7 @@ byId('menuExpand0').addEventListener('click', function () {
 
 var expanded1 = true;
 
-byId('arrowDown1').addEventListener('click', function () {
+byId('arrowDown1').addEventListener('click', function() {
 
     if (expanded1) {
         byId('collapse1').style.display = 'none';
@@ -84,7 +84,7 @@ byId('arrowDown1').addEventListener('click', function () {
 
 var menuexpanded1 = true;
 
-byId('menuExpand1').addEventListener('click', function () {
+byId('menuExpand1').addEventListener('click', function() {
 
     if (menuexpanded1) {
         byId('collapse1').style.display = 'none';
@@ -101,7 +101,7 @@ byId('menuExpand1').addEventListener('click', function () {
 
 
 var expanded2 = true;
-byId('arrowDown2').addEventListener('click', function () {
+byId('arrowDown2').addEventListener('click', function() {
 
     if (expanded2) {
         byId('collapse2').style.display = 'none';
@@ -117,7 +117,7 @@ byId('arrowDown2').addEventListener('click', function () {
 
 var menuexpanded2 = true;
 
-byId('menuExpand2').addEventListener('click', function () {
+byId('menuExpand2').addEventListener('click', function() {
 
     if (menuexpanded2) {
         byId('collapse2').style.display = 'none';
@@ -134,7 +134,7 @@ byId('menuExpand2').addEventListener('click', function () {
 
 // $(function() {
 
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('DOMContentLoaded', function() {
 
     // template for not always writing document.getElementById
     // const byId = (id) => document.getElementById(id);
@@ -145,7 +145,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     // });
 
-    byId('createMyNewAccountButton').addEventListener('click', function () {
+    byId('createMyNewAccountButton').addEventListener('click', function() {
         //to be able to use register and than get the message - congrats... 
         event.preventDefault();
         // all fields needed to register: username, password, email, emailAgain, firstName, surname, city, country
@@ -168,43 +168,83 @@ window.addEventListener('DOMContentLoaded', function () {
         // // as userStorage is put above userController it becomes like a global variable and you can access it           
         if (username.trim().length < 1) {
             hasErrors = true;
-            // message for username that does not meet the requirements
+            // message for username that does not meet the requirements            
             document.querySelectorAll('.signupErrorMessageChoose')[0].style.display = 'inline'
+            byId('existingUsername').style.display = 'none';
+
         } else {
             // if you try 2 times in a row the message from above won't go away
             document.querySelectorAll('.signupErrorMessageChoose')[0].style.display = 'none'
+
+            // check if username already exists
+            if (userStorage.checkIfUserExists(username)) {
+                byId('existingUsername').style.display = 'inline';
+            } else {
+                byId('existingUsername').style.display = 'none';
+            }
+
         }
 
+        var firstPasswordError = false;
         if (password.trim().length <= 8) {
             hasErrors = true;
+            firstPasswordError = true;
             document.querySelector('#choosePassword8').style.display = 'inline';
         } else {
             document.querySelector('#choosePassword8').style.display = 'none';
         }
 
         if (!(/[A-Z]+/.test(password))) {
+            if (firstPasswordError) {
+                document.querySelector('#choosePasswordUc').innerText = '\nPasswords must have at least 1 uppercase letter(s).';
+            } else {
+                document.querySelector('#choosePasswordUc').innerText = 'Passwords must have at least 1 uppercase letter(s).';
+            }
+
             hasErrors = true;
+            firstPasswordError = true;
             document.querySelector('#choosePasswordUc').style.display = 'inline';
         } else {
             document.querySelector('#choosePasswordUc').style.display = 'none';
         }
 
         if (!(/[a-z]+/.test(password))) {
+            if (firstPasswordError) {
+                document.querySelector('#choosePasswordLc').innerText = '\nPasswords must have at least 1 lower case letter(s).';
+            } else {
+                document.querySelector('#choosePasswordLc').innerText = 'Passwords must have at least 1 lower case letter(s).';
+            }
+
             hasErrors = true;
+            firstPasswordError = true;
             document.querySelector('#choosePasswordLc').style.display = 'inline';
         } else {
             document.querySelector('#choosePasswordLc').style.display = 'none';
         }
 
         if (!(/[0-9]+/.test(password))) {
+            if (firstPasswordError) {
+                document.querySelector('#choosePasswordDigit').innerText = '\nPasswords must have at least 1 digit(s).';
+            } else {
+                document.querySelector('#choosePasswordDigit').innerText = 'Passwords must have at least 1 digit(s).';
+            }
+
             hasErrors = true;
+            firstPasswordError = true;
             document.querySelector('#choosePasswordDigit').style.display = 'inline';
         } else {
             document.querySelector('#choosePasswordDigit').style.display = 'none';
         }
 
         if (!(/[^A-Za-z0-9]+/.test(password))) {
+            if (firstPasswordError) {
+                document.querySelector('#choosePasswordSpecialCharacter').innerText = '\nPasswords must have at least 1 special character(s).';
+            } else {
+                document.querySelector('#choosePasswordSpecialCharacter').innerText = 'Passwords must have at least 1 special character(s).';
+            }
+
             hasErrors = true;
+            firstPasswordError = true;
             document.querySelector('#choosePasswordSpecialCharacter').style.display = 'inline';
         } else {
             document.querySelector('#choosePasswordSpecialCharacter').style.display = 'none';
