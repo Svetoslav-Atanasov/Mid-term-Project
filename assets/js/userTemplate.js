@@ -23,7 +23,9 @@
         const listStudentEl = document.getElementById('listStudent');
         const btnShowListStudent = document.getElementById('showListStudent');
         const btnShowListCourser = document.getElementById('showListCourses');
-        const courseNameEl = document.getElementById('courseName');
+        const courseNameJSEl = document.getElementById('courseNameJS');
+        const courseNameJAVAEl = document.getElementById('courseNameJava');
+        const courseNamePHPEl = document.getElementById('courseNamePHP')
         const middleContainerEl = document.getElementById('middleContainer');
         const middleContainerCourseEl = document.getElementById('middle-container-course');
         const titleCourseEl = document.getElementById('titleCourse');
@@ -62,11 +64,27 @@
 
         });
 
-        courseNameEl.addEventListener('click', function(event) {
+        courseNameJSEl.addEventListener('click', function(event) {
             event.preventDefault();
             middleContainerEl.style.display = 'none'
             middleContainerCourseEl.style.display = 'inline';
-            titleCourseEl.innerHTML = document.getElementById('courseName').innerText;
+            titleCourseEl.innerHTML = document.getElementById('courseNameJS').innerText;
+
+            
+        });
+        courseNameJAVAEl.addEventListener('click', function(event) {
+            event.preventDefault();
+            middleContainerEl.style.display = 'none'
+            middleContainerCourseEl.style.display = 'inline';
+            titleCourseEl.innerHTML = document.getElementById('courseNameJS').innerText;
+
+            
+        });
+        courseNamePHPEl.addEventListener('click', function(event) {
+            event.preventDefault();
+            middleContainerEl.style.display = 'none'
+            middleContainerCourseEl.style.display = 'inline';
+            titleCourseEl.innerHTML = document.getElementById('courseNameJS').innerText;
 
             
         });
@@ -111,7 +129,7 @@
         
         
         console.log(blockNavMenuCourseEl)
-        var courseName = document.getElementById('courseName').innerText;
+       
         var titleCourseEl = document.getElementById('titleCourse');
         console.log(userData);
 
