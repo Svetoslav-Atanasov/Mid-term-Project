@@ -240,6 +240,7 @@ main.middleContainer>h2 {
     font-size: 28px;
 }
 
+
 .courseBox {
     margin-bottom: 15px;
     border: 1px dotted #ddd;
@@ -269,6 +270,16 @@ div.courseBox:hover {
     float: right;
     width:25%;
 }
+
+.connect-student-with-course {
+    padding: 13px;
+    border-radius: 4px;
+    border: 1px solid #ededed;
+    font-size: 15px;
+    font-weight: normal;
+    background-color: #fff; 
+    margin: 20px 0;
+}
 @media screen and (max-width: 1170px) {
     .regionMainContainer {
         width: 66%;
@@ -285,10 +296,30 @@ div.courseBox:hover {
     .left-containers {
         float: left;
         width: 31%;
+        /* position: relative;
+        bottom: 78vh; */
+    }
+    .lastest-news-container {
+        padding: 13px;
+        border-radius: 4px;
+        border: 1px solid #ededed;
+        font-size: 15px;
+        font-weight: normal;
+        background-color: #fff;
         position: relative;
-        bottom: 78vh;
+        top: 20px;
+    }
+    .connect-student-with-course {
+        padding: 13px;
+        border-radius: 4px;
+        border: 1px solid #ededed;
+        font-size: 15px;
+        font-weight: normal;
+        background-color: #fff;
+        margin: 41px 0;
     }
 }
+
 
 /* login; moodle logo */
 
@@ -362,3 +393,14 @@ footer {
     margin-top: 6px;
     background: #333366;
 }
+#hidde1 {
+    padding-bottom: 1vh;
+    display: none;
+    text-indent: 6.5%;
+}
+#hidde2 {
+    padding-bottom: 1vh;
+    display: none;
+    text-indent: 6.5%;
+}
+

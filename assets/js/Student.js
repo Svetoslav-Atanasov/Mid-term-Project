@@ -9,7 +9,7 @@ class Student extends User {
         this.city = city;
         this.country = country;
         // i.e. JavaScript Season X, PHP Season X, etc.
-        this.course = null;
+        this.course = '';
     }
     addCourse (someCourse) {
         this.course = someCourse

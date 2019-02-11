@@ -27,7 +27,7 @@
         const middleContainerEl = document.getElementById('middleContainer');
         const middleContainerCourseEl = document.getElementById('middle-container-course');
         const titleCourseEl = document.getElementById('titleCourse');
-        const backToHomeEl = document.getElementById('backToHome')
+        const backToHomeEl = document.getElementById('backToHome');
         const footerLogin = document.getElementById('footer-login');
         footerLogin.innerHTML = 'You are logged in';
         
