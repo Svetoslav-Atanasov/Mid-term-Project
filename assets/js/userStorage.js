@@ -95,7 +95,7 @@ var userStorage = (function() {
             }
 
             const foundUser = userList.find(user => user.username === username &&
-                user.password === password); 
+                user.password === password);
 
             if (foundUser) {
 
@@ -105,8 +105,8 @@ var userStorage = (function() {
             return foundUser;
         },
 
-            // return userList.find(user => user.username === username &&
-            //     user.password === password);
+        // return userList.find(user => user.username === username &&
+        //     user.password === password);
         //},
 
         checkIfUserExists: function(username) {
@@ -123,7 +123,7 @@ var userStorage = (function() {
         },
 
         getCoursesList() {
-            
+
             return coursesList;
         }
     }

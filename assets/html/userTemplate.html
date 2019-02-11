@@ -7,17 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Moodle</title>
     <link rel="shortcut icon" href="http://moodle.ittalents.bg/theme/image.php/more/theme/1460374795/favicon">
-    
+
     <link rel="stylesheet" href="../styles/reset.css" />
     <!-- <link rel="stylesheet" href="../styles/course.css"> -->
     <link rel="stylesheet" href="../styles/styles.css" />
     <link rel="shortcut icon" href="http://moodle.ittalents.bg/theme/image.php/more/theme/1460374795/favicon">
-    <script src = "/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
     <!-- <script src="../js/course.js"></script> -->
     <!-- <link rel="stylesheet" href="../styles/course.css"> -->
-  
 
-    
+
+
 </head>
 
 <body>
@@ -27,10 +27,10 @@
     <header class="firstHeader">
 
         <div class="brandContainer">
-            <a href="index.html">IT Talents Training Camp</a>
+            <a href="userTemplate.html">IT Talents Training Camp</a>
         </div>
         <!-- Login page -->
-        <div id = 'logInContainer'class="logInContainer">
+        <div id='logInContainer' class="logInContainer">
             <div id="loginName">
                 {{username}}
             </div>
@@ -41,29 +41,35 @@
     <!-- second header -->
     <header>
         <div class="nameContainer">
-            <h1 id = 'titleCourse'>IT Talents Moodle</h1>
+            <h1 id='titleCourse'>IT Talents Moodle</h1>
         </div>
     </header>
 
     <div class="wrapper">
         <div class="regionMainContainer">
             <div class="leftBox">
-                <article class="blockMainMenu">                    
+                <article class="blockMainMenu">
                     <ul>
                         <li>
+<<<<<<< HEAD
                             <ul id="courseNav">
                                 <li><a href="../../index.html">Home</a></li>
                                 <li><a href="http://"><span class="arrow">►</span>Season</a></li>
                             </ul>
+=======
+                            <a href="../../index.html">Home</a>
+
+                            <a href="">Season </a>
+>>>>>>> f49a14b5d332eaef157d87840582bad0d909655a
                         </li>
                     </ul>
                 </article>
-                <article id="blockNavigationMenu"class="blockMainMenu blockNavigationMenu">
+                <article id="blockNavigationMenu" class="blockMainMenu blockNavigationMenu">
                     <h2>NAVIGATION</h2>
                     <ul>
                         <li>
                             <p>
-                                <a id="backToHome"href="">Home</a>
+                                <a id="backToHome" href="">Home</a>
                             </p>
                         </li>
                         <li>
@@ -87,9 +93,19 @@
                         <h2 id="hyperHome">NAVIGATION</h2>
                         <a id="hyperHome" href="../../index.html">Home</a>
                         <ul>
-                            <li><a href="http://"><img class="" src="../images/navigationitem.svg"><span class="navMenu">Dashboard</span></a></li>
-                            <li id="drop1"><img id="rotate1" src="../images/collapsed.svg"><span class="navMenu">Site pages</span><li id="hidden1"><a href=""><img src="../images/collapsed.svg">Home</a></li></li>
-                            <li id="drop2"><img id="rotate2" src="../images/collapsed.svg"><span class="navMenu">My courses</span><li id="hidden2"><a href=""><img src="../images/collapsed.svg">JS Season X</a></li></li>
+                            <li>
+                                <a href=""><img class="" src="../images/navigationitem.svg"><span class="navMenu">Dashboard</span></a>
+                            </li>
+                            <li id="drop1"><img id="rotate1" src="../images/collapsed.svg"><span class="navMenu">Site pages</span>
+                                <li id="hidden1">
+                                    <a href=""><img src="../images/collapsed.svg">Home</a>
+                                </li>
+                            </li>
+                            <li id="drop2"><img id="rotate2" src="../images/collapsed.svg"><span class="navMenu">My courses</span>
+                                <li id="hidden2">
+                                    <a href=""><img src="../images/collapsed.svg">JS Season X</a>
+                                </li>
+                            </li>
                         </ul>
                     </article>
                 </div>
@@ -99,85 +115,84 @@
                 <h2>Available courses</h2>
                 <div class="courseBox">
                     <img class="icons" src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/i/course">
-                    <a id = 'courseName'href="">JavaScript Season X</a>
+                    <a id='courseName' href="">JavaScript Season X</a>
                 </div>
             </main>
 
             <div class="middle-container-course" id="middle-container-course">
-            <main class="middleContainer">
-
-                <div class="courseBox">
-                    <ul class="lastLi">
-                        <li><img src="../images/news.svg" alt=""><a class="description" href="">News forum</a></li>
-                        <li><img src="../images/pdf-24.png" alt=""><a class="description" href="https://addyosmani.com/resources/essentialjsdesignpatterns/book/">Learning JavaScript Design Patterns</a></li>
-                        <li><img src="../images/link.svg" alt=""><a class="description" href="https://www.vinta.com.br/blog/2015/javascript-lambda-and-arrow-functions/">Link to lambda expressions article URL</a></li>
-                        <li><img src="../images/link.svg" alt=""><a class="description" href="http://es6-features.org/#Constants">ES6 New Features URL</a></li>
-                        <li><img src="../images/pdf-24.png" alt=""><a class="description" href="../courseFiles/Lecture 2 Homework.pdf">Practice Task - OOP File</a></li>
-                    </ul>
-                </div>
-                <div class="courseBox">
-                    <h1>3 October - 9 October</h1>
-                    <p>Lecture 1 - Course introduction. Primitive variables and data types.</p>
-                    <ul class="lastLi">
-                        <li><img src="../images/pdf-24.png" alt=""><a href="../courseFiles/Lecture 2 - Cycles.pdf" class="description" >Lecture 00 - Welcome Niki File</a></li>
-                        <li><img src="../images/pdf-24.png" alt=""><a href="../courseFiles/Lecture 2 - Cycles.pdf" class="description" >Lecture 01 - Primitive types, If-else
+                <main class="middleContainer">
+                    <div class="courseBox">
+                        <ul class="lastLi">
+                            <li><img src="../images/pdf-24.png" alt=""> <a href="http://moodle.ittalents.bg/pluginfile.php/18299/mod_resource/content/0/Season%207%20Test%203.pdf">Good book for JS - Functions and Objects
+                                File</a></li>
+                            <li><img src="../images/pdf-24.png" alt=""><a href="http://moodle.ittalents.bg/pluginfile.php/17657/mod_resource/content/0/Season%209%20Test%201%20v1%20JavaScript.pdf">Season 9 Test 1 JavaScript File</a></li>
+                            <li><img src="../images/pdf-24.png" alt=""><a href="http://moodle.ittalents.bg/pluginfile.php/17754/mod_resource/content/0/HTML%20and%20CSS%20Design%20and%20Build%20Websites.pdf">HTML and CSS Design and Build Websites
+                                File</a></li>
+                            <li><img src="../images/pdf-24.png" alt=""><a href="http://moodle.ittalents.bg/pluginfile.php/17909/mod_resource/content/0/sud.pdf">Practice Task - OOP File</a></li>
+                        </ul>
+                    </div>
+                    <div class="courseBox">
+                        <h1>3 October - 9 October</h1>
+                        <p>Lecture 1 - Course introduction. Primitive variables and data types.</p>
+                        <ul class="lastLi">
+                            <li><img src="../images/pdf-24.png" alt=""> <a href="">Lecture 00 - Welcome Niki File</a></li>
+                            <li><img src="../images/pdf-24.png" alt=""><a href="">Lecture 01 - Primitive types, If-else
                                 statement File</a></li>
-                        <li><img src="../images/archive-24.png" alt=""><a class="description" href="../courseFiles/Lecture 2 - Cycles.pdf">demo File</a></li>
-                        <li><img src="../images/link.svg" alt=""><a class="description" href="https://www.youtube.com/playlist?list=PLPRaPR8amWjVBUcF8XRDc5uD5wXAN0up3">Link to video</a></li>
-                    </ul>
-                </div>
-                <div class="courseBox">
-                    <h1>10 October - 16 October</h1>
-                    <p>Lecture 1 - Course introduction. Primitive variables and data types.</p>
-                    <ul class="lastLi">
-                        <li><img src="../images/pdf-24.png" alt=""><a class="description" href="../courseFiles/Lecture - Functions Advanced.pdf">Lecture 00 - Welcome Niki File</a></li>
-                        <li><img src="../images/pdf-24.png" alt=""><a class="description" href="../courseFiles/Lecture - Functions Advanced.pdf">Lecture 01 - Primitive types, If-else
+                            <li><img src="../images/archive-24.png" alt=""><a href="http://moodle.ittalents.bg/pluginfile.php/16927/mod_resource/content/0/demo.js">demo File</a></li>
+                            <li><img src="../images/text-24.png" alt=""><a href="https://www.youtube.com/playlist?list=PLPRaPR8amWjVBUcF8XRDc5uD5wXAN0up3">Link to video URL</a></li>
+                        </ul>
+                    </div>
+                    <div class="courseBox">
+                        <h1>10 October - 16 October</h1>
+                        <p>Lecture 1 - Course introduction. Primitive variables and data types.</p>
+                        <ul class="lastLi">
+                            <li><img src="../images/pdf-24.png" alt=""> <a href="">Lecture 00 - Welcome Niki File</a></li>
+                            <li><img src="../images/pdf-24.png" alt=""><a href="">Lecture 01 - Primitive types, If-else
                                 statement File</a></li>
-                        <li><img src="../images/pdf-24.png" alt=""><a class="description" href="../courseFiles/Lecture - Functions Advanced.pdf">demo File</a></li>
-                        <li><img src="../images/link.svg" alt=""><a class="description" href="https://www.youtube.com/playlist?list=PLPRaPR8amWjVXwnuuthExRgb77VsrvAYC">Link to video</a></li>
-                    </ul>
-                </div>
-                <div class="courseBox">
-                    <h1 class="lastLi">17 October - 23 October</h1>
-                </div>
-                <div class="courseBox">
-                    <h1 class="lastLi">24 October - 30 October</h1>
-                </div>
-                <div class="courseBox">
-                    <h1 class="lastLi">31 October - 6 November</h1>
-                </div>
-    
-            </main>
-         </div>
+                            <li><img src="../images/pdf-24.png" alt=""><a href="">demo File</a></li>
+                            <li><img src="../images/pdf-24.png" alt=""><a href="">Link to video URL</a></li>
+                        </ul>
+                    </div>
+                    <div class="courseBox">
+                        <h1 class="lastLi">17 October - 23 October</h1>
+                    </div>
+                    <div class="courseBox">
+                        <h1 class="lastLi">24 October - 30 October</h1>
+                    </div>
+                    <div class="courseBox">
+                        <h1 class="lastLi">31 October - 6 November</h1>
+                    </div>
+
+                </main>
+            </div>
+>>>>>>> f49a14b5d332eaef157d87840582bad0d909655a
 
 
 
-        </div>       
+        </div>
         <div class="left-containers" id="left-containers">
             <div class="lastest-news-container">
                 <h2 class="styles-h2">LASTEST NEWS</h2>
                 <div class="news-info">
                     <p>There are no upcoming events</p>
                 </div>
-                <a href="index.html">go to home</a>
+                <a href="index.html"></a>
             </div>
 
-            <main id="adminMainContainer" class="admin-main-container lastest-news-container" >
-                <h2 class="styles-h2" > ADMIN STUFF</h2>
-                <button id="showListStudent" class="styles-btn">show list student</button>
-                <button id="showListCourses" class="styles-btn">show courses</button>
+            <main id="adminMainContainer" class="admin-main-container lastest-news-container">
+                <h2 class="styles-h2"> ADMIN PANEL</h2>
+                <button id="showListCourses" class="styles-btn">Courses list</button>
+                <button id="showListStudent" class="styles-btn">Students list</button>
                 <ul id="listStudent" class="list-student">
                 </ul>
-                <ul id="listCourses" class="list-student" ></ul>
+                <ul id="listCourses" class="list-student"></ul>
             </main>
         </div>
 
 
 
         <footer>
-            <div id="footer-login"class="footerLogInContainer">You are not logged in. (
-
-                <a href="/assets/html/login.html">Log in</a>)
+            <div id="footer-login" class="footerLogInContainer">You are not logged in. (<a href="/assets/html/login.html">Log in</a>)
             </div>
             <div class="siteLink">
                 <a title="Moodle" href="http://moodle.org/">
@@ -191,14 +206,14 @@
 
 
 </body>
-    
+
 <script src="/node_modules/jquery/dist/jquery.min.js"></script>
-<script src = "/node_modules/handlebars/dist/handlebars.min.js"></script>
+<script src="/node_modules/handlebars/dist/handlebars.min.js"></script>
 <script src="../js/User.js"></script>
 <script src="../js/Student.js"></script>
 <script src="../js/Admin.js"></script>
-<script src = "../js/userStorage.js"></script>
-<script src = "../js/userTemplate.js"></script>
+<script src="../js/userStorage.js"></script>
+<script src="../js/userTemplate.js"></script>
 <script src="../js/course.js"></script>
 
 </html>
