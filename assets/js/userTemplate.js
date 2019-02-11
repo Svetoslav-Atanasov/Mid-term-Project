@@ -23,6 +23,10 @@
         const listStudentEl = document.getElementById('listStudent');
         const btnShowListStudent = document.getElementById('showListStudent');
         const btnShowListCourser = document.getElementById('showListCourses');
+        const courseNameEl = document.getElementById('courseName');
+        const middleContainerEl = document.getElementById('middleContainer');
+        const middleContainerCourseEl = document.getElementById('middle-container-course')
+
 
         const admin = new Admin(userData.username, userData.password);
 
@@ -51,6 +55,16 @@
 
         });
 
+        courseNameEl.addEventListener('click', function(event) {
+            event.preventDefault();
+            middleContainerEl.style.display = 'none'
+            middleContainerCourseEl.style.display = 'inline';
+
+            
+        })
+
+
+
 
         btnShowListCourser.addEventListener('click', function (event) {
             event.preventDefault();
@@ -70,7 +84,16 @@
 
     if (userData.role === 'student') {
         
+        const blockNavigationMenuEl = document.getElementById('blockNavigationMenu');
+        blockNavigationMenuEl.style.display='none';
+        const blockNavMenuCourseEl = document.getElementById('block-nav-menu-course');
+        blockNavMenuCourseEl.style.display = 'block';
+        const middleContainerEl = document.getElementById('middleContainer');
+        middleContainerEl.style.display = 'none';
+        const middleContainerCourseEl = document.getElementById('middle-container-course');
+        middleContainerCourseEl.style.display = 'inline'
         
+        console.log(blockNavMenuCourseEl)
         var courseName = document.getElementById('courseName').innerText;
         var titleCourseEl = document.getElementById('titleCourse');
         console.log(userData);

@@ -105,7 +105,7 @@ div.logInContainer a:hover {
     max-width: 97%;
     margin-top: 50px;
     margin: 0 auto;
-    border: 1px solid red
+    /* border: 1px solid red */
 }
 
 .regionMainContainer {
@@ -178,6 +178,31 @@ article.blockMainMenu>ul>li {
     margin-bottom: 6px;
 }
 
+
+#hidden1 {
+    padding-bottom: 1vh;
+    display: none;
+    text-indent: 6.5%;
+}
+#hidden2 {
+    padding-bottom: 1vh;
+    display: none;
+    text-indent: 6.5%;
+}
+.courseBox > h1 {
+    font-size: 3.5vh;
+}
+.courseBox > p {
+    font-size: 2vh;
+    padding: 4vh 2vh 2vh 6vh;
+}
+
+
+
+.block-nav-menu-course {
+    display: none;
+}
+
 .collapsible {
     cursor: pointer;
     width: 100%;
@@ -226,11 +251,24 @@ div.courseBox:hover {
     background-color: #E6E6E6
 }
 
+
+.middle-container-course {
+    display: none;
+}
+.courseBox > ul > li {
+    font-size: 14.5px;
+    margin: 1vh 2vh 1vh 7vh;
+    font-weight: 200;
+}
+
 .calendar-box {
     float: right;
     
 }
-
+.left-containers{
+    float: right;
+    width:25%;
+}
 @media screen and (max-width: 1170px) {
     .regionMainContainer {
         width: 66%;
@@ -243,6 +281,12 @@ div.courseBox:hover {
     }
     .calendar-box {
         display: none;
+    }
+    .left-containers {
+        float: left;
+        width: 31%;
+        position: relative;
+        bottom: 78vh;
     }
 }
 
@@ -300,10 +344,7 @@ footer {
 }
 
 
-.left-containers{
-    float: right;
-    width:25%;
-}
+
 
 
 .list-student {
