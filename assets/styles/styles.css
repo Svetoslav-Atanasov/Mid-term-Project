@@ -370,3 +370,9 @@ footer {
 .styles-btn:hover {
     background: #E6E6E6;
 }
+
+.navMenu,
+#rotate1,
+#rotate2 {
+    cursor: pointer;
+}
