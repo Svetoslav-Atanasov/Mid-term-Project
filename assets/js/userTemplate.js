@@ -25,7 +25,12 @@
         const btnShowListCourser = document.getElementById('showListCourses');
         const courseNameEl = document.getElementById('courseName');
         const middleContainerEl = document.getElementById('middleContainer');
-        const middleContainerCourseEl = document.getElementById('middle-container-course')
+        const middleContainerCourseEl = document.getElementById('middle-container-course');
+        const titleCourseEl = document.getElementById('titleCourse');
+        const backToHomeEl = document.getElementById('backToHome')
+        const footerLogin = document.getElementById('footer-login');
+        footerLogin.innerHTML = 'You are logged in';
+        
 
 
         const admin = new Admin(userData.username, userData.password);
@@ -59,10 +64,18 @@
             event.preventDefault();
             middleContainerEl.style.display = 'none'
             middleContainerCourseEl.style.display = 'inline';
+            titleCourseEl.innerHTML = document.getElementById('courseName').innerText;
 
             
-        })
+        });
+        backToHomeEl.addEventListener('click', function () {
 
+            event.preventDefault();
+            middleContainerEl.style.display = 'block';
+            middleContainerCourseEl.style.display = 'none';
+
+        })
+   
 
 
 
@@ -73,6 +86,7 @@
             listCourseInfo.style.display == "block" ? listCourseInfo.style.display = 'none' : listCourseInfo.style.display = 'block'
 
             listCourseInfo.innerHTML = admin.showCourses();
+            console.log(admin.showCourses())
 
         });
         
@@ -93,6 +107,7 @@
         const middleContainerCourseEl = document.getElementById('middle-container-course');
         middleContainerCourseEl.style.display = 'inline'
         
+        
         console.log(blockNavMenuCourseEl)
         var courseName = document.getElementById('courseName').innerText;
         var titleCourseEl = document.getElementById('titleCourse');
@@ -103,5 +118,6 @@
         console.log(titleCourseEl)
         }
     }
-
+    
+    
 })();
