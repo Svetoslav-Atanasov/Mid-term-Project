@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../styles/signup.css" />
     <link rel="shortcut icon" href="http://moodle.ittalents.bg/theme/image.php/more/theme/1460374795/favicon">
-    <!-- <script src="../js/signup.js"></script> -->
-    <!-- <script src="../js/signup.js"></script> -->
+
 </head>
 
 <body>
@@ -21,10 +20,12 @@
         <div class="brandContainer">
             <a href="/index.html">IT Talents Training Camp</a>
         </div>
+
         <!-- Login page -->
         <div class="logInContainer">You are not logged in. (<a href="login.html">Log in</a>)
         </div>
     </header>
+
     <!-- container page -->
 
     <!-- second header -->
@@ -44,11 +45,13 @@
                 <img id="arrowDown0" src="/assets/images/arrowDown.png" />
                 <a id="menuExpand0">Expand all</a>
             </div>
-            <!-- username and password are collapsable together -->
 
+            <!-- username and password are collapsable together -->
             <h3 id="menuExpand1"><img id="arrowDown1" src="/assets/images/arrowDown.png" />Choose your username and password
             </h3>
             <div id="collapse1">
+
+                <!-- USERNAME -->
                 <div id="username">
                     <div>
                         <span class='signupErrorMessageChoose'>Missing username</span>
@@ -62,6 +65,7 @@
                 </div>
                 <div id="passwordRequirements">The password must have at least 8 characters, at least 1 digit(s), at least 1 lower case letter(s), at least 1 upper case letter(s), at least 1 non-alphanumeric character(s) such as as *, -, or #</div>
 
+                <!-- PASSWORD -->
                 <div id="password">
                     <div>
                         <span class='signupErrorMessageChoose' id="choosePassword8">Passwords must be at least 8 characters long.</span>
@@ -79,15 +83,15 @@
                 </div>
             </div>
 
-
-
             <!-- more details are collapsable together -->
-
             <h3 id="menuExpand2"><img id="arrowDown2" src="/assets/images/arrowDown.png" />More details</h3>
             <div id="collapse2">
+
+                <!-- EMAIL -->
                 <div id="email">
                     <div>
                         <span class='signupErrorMessageMoreDetails'>Invalid email address</span>
+                        <span class='signupErrorMessageChoose' id="missingEmailInput">Missing email address</span>
                     </div>
                     <label for="emailInput">Email address<img class="requiredStar" src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/req"
                             title="Required field" /></label>
@@ -95,15 +99,19 @@
                     <input id="emailInput" type="email" name="email">
                 </div>
 
+                <!-- EMAIL AGAIN -->
                 <div id="emailAgain">
                     <div>
                         <span class='signupErrorMessageMoreDetails'>Invalid email address</span>
+                        <span class='signupErrorMessageChoose' id="missingEmailAgainInput">Missing email address</span>
+
                     </div>
                     <label for="emailAgainInput">Email (again)<img class="requiredStar" src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/req"
                             title="Required field" /></label>
                     <input id="emailAgainInput" type="email" name="email again">
                 </div>
 
+                <!-- FIRST NAME -->
                 <div id="firstName">
                     <div>
                         <span class='signupErrorMessageMoreDetails'>Missing given name</span>
@@ -113,6 +121,7 @@
                     <input id="firstNameInput" type="text" name="first name">
                 </div>
 
+                <!-- SURNAME -->
                 <div id="surname">
                     <div>
                         <span class='signupErrorMessageMoreDetails'>Missing surname</span>
@@ -122,11 +131,13 @@
                     <input id="surnameInput" type="text" name="surname">
                 </div>
 
+                <!-- CITY -->
                 <div id="city">
                     <label for="cityInput">City/town</label>
                     <input id="cityInput" type="text" name="city">
                 </div>
             </div>
+            <!-- COUNTRY -->
             <div id="country">
                 <label for="countryInput">Country</label>
                 <select id="countryInput" name="country">
@@ -385,11 +396,10 @@
         </div>
         <div id="signupButtons">
             <button id="createMyNewAccountButton" onclick="">Create my new account</button>
+
             <!-- button used as a link to login.html-->
             <button id="cancel" onclick="window.location.href='../html/login.html'">Cancel</button>
         </div>
-
-
 
         <div id="requiredFieldsText">There are required fields in this form marked <img src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/req" />.</div>
     </div>
@@ -399,13 +409,11 @@
             You are not logged in. (<a href="/assets/html/login.html">Log in</a>)
         </div>
 
-
         <div class="home">
             <a title="Home" href="/index.html">Home</a>
         </div>
 
         </div>
-
 
     </footer>
     <script src="../js/User.js"></script>

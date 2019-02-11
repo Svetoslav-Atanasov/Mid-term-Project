@@ -1,8 +1,3 @@
-// window.addEventListener('DOMContentLoaded', function() {
-
-// }, false);
-
-
 //unmask checkbox - show/hide password characters
 
 function revealPassword() {
@@ -27,8 +22,6 @@ byId('arrowDown0').addEventListener('click', function() {
         byId('collapse2').style.display = 'none';
         byId('menuExpand0').textContent = 'Collapse all';
         byId('arrowDown0').style.transform = 'rotate(270deg)';
-        // this.img.style.transform = 'rotate(180deg)';
-
 
         expanded0 = false;
     } else {
@@ -36,7 +29,6 @@ byId('arrowDown0').addEventListener('click', function() {
         byId('collapse2').style.display = 'block';
         byId('menuExpand0').textContent = 'Expand all';
         byId('arrowDown0').style.transform = '';
-
 
         expanded0 = true;
     }
@@ -52,14 +44,12 @@ byId('menuExpand0').addEventListener('click', function() {
         byId('menuExpand0').textContent = 'Collapse all';
         byId('arrowDown0').style.transform = 'rotate(270deg)';
 
-
         menuExpanded0 = false;
     } else {
         byId('collapse1').style.display = 'block';
         byId('collapse2').style.display = 'block';
         byId('menuExpand0').textContent = 'Expand all';
         byId('arrowDown0').style.transform = '';
-
 
         menuExpanded0 = true;
     }
@@ -99,7 +89,6 @@ byId('menuExpand1').addEventListener('click', function() {
 
 // expand/hide menu More details
 
-
 var expanded2 = true;
 byId('arrowDown2').addEventListener('click', function() {
 
@@ -132,20 +121,10 @@ byId('menuExpand2').addEventListener('click', function() {
 
 // register form
 
-// $(function() {
-
 window.addEventListener('DOMContentLoaded', function() {
 
-    // template for not always writing document.getElementById
-    // const byId = (id) => document.getElementById(id);
-
-    // byId('showRegistrationForm').addEventListener('click', function() {
-    //     byId('showRegistrationForm').style.display = 'none';
-    //     byId('registrationForm').style.display = 'flex';
-
-    // });
-
     byId('createMyNewAccountButton').addEventListener('click', function() {
+
         //to be able to use register and than get the message - congrats... 
         event.preventDefault();
         // all fields needed to register: username, password, email, emailAgain, firstName, surname, city, country
@@ -160,12 +139,11 @@ window.addEventListener('DOMContentLoaded', function() {
         let country = byId('countryInput').value;
 
 
-
+        //VALIDATIONS
         // flag - to see if there are any mistakes in the registration attempt
-        //VALIDATION
         let hasErrors = false;
 
-        // // as userStorage is put above userController it becomes like a global variable and you can access it           
+        // USERNAME
         if (username.trim().length < 1) {
             hasErrors = true;
             // message for username that does not meet the requirements            
@@ -185,6 +163,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
         }
 
+        // PASSWORD
         var firstPasswordError = false;
         if (password.trim().length <= 8) {
             hasErrors = true;
@@ -260,6 +239,15 @@ window.addEventListener('DOMContentLoaded', function() {
 
         }
 
+        // EMAIL
+        if (email.trim().length < 1) {
+            hasErrors = true;
+            document.querySelector('#missingEmailInput').style.display = 'inline'
+        } else {
+            document.querySelector('#missingEmailInput').style.display = 'none'
+        }
+
+
         if (!validateEmail(email)) {
             hasErrors = true;
             // document.querySelector('#email > .signupErrorMessage').innerText = 'Invalid email address';
@@ -268,16 +256,21 @@ window.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.signupErrorMessageMoreDetails')[0].style.display = 'none'
         }
 
+        // EMAIL AGAIN
+
+        if (email.trim().length < 1) {
+            hasErrors = true;
+            document.querySelector('#missingEmailAgainInput').style.display = 'inline'
+        } else {
+            document.querySelector('#missingEmailAgainInput').style.display = 'none'
+        }
+
         if (!validateEmail(emailAgain)) {
             let hasErrors = true;
             document.querySelectorAll('.signupErrorMessageMoreDetails')[1].style.display = 'inline'
         } else {
             document.querySelectorAll('.signupErrorMessageMoreDetails')[0].style.display = 'none'
         }
-        // else {
-        //     // no message if username meets requirements
-        //     document.querySelector('#emailInput > .signupErrorMessage').innerText = '';
-        // }
 
         if (email !== emailAgain) {
             let hasErrors = true;
@@ -294,6 +287,7 @@ window.addEventListener('DOMContentLoaded', function() {
             return validation.test(String(email).toLowerCase());
         };
 
+        // FIRST NAME
         if (firstName.trim().length < 1) {
             hasErrors = true;
             document.querySelectorAll('.signupErrorMessageMoreDetails')[2].style.display = 'inline'
@@ -301,22 +295,28 @@ window.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.signupErrorMessageMoreDetails')[2].style.display = 'none'
         }
 
+        // SURNAME
         if (surname.trim().length < 1) {
             hasErrors = true;
             document.querySelectorAll('.signupErrorMessageMoreDetails')[3].style.display = 'inline'
         } else {
             document.querySelectorAll('.signupErrorMessageMoreDetails')[3].style.display = 'none'
         }
+
+        // CITY
         // longest city name is:  Winchester-on-the-Severn - 24 characters including hyphens
         if (city.trim().length > 24) {
             city = '';
         }
+
+        // COUNTRY
         // if no country is selected
         if (country === 'Select a country') {
             country = '';
         }
         console.log(hasErrors)
 
+        // NO ERRORS - REGISTER USER; RELOCATE TO LOGIN
         if (!hasErrors) {
             userStorage.register(username, password, email, emailAgain, firstName, surname, city, country);
             document.location.href = '../html/login.html';
