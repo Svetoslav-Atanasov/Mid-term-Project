@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Moodle</title>
+    <link rel="shortcut icon" href="http://moodle.ittalents.bg/theme/image.php/more/theme/1460374795/favicon">
+    
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <!-- <link rel="stylesheet" href="../styles/course.css"> -->
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="shortcut icon" href="http://moodle.ittalents.bg/theme/image.php/more/theme/1460374795/favicon">
+    <script src = "/node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- <script src="../js/course.js"></script> -->
+    <!-- <link rel="stylesheet" href="../styles/course.css"> -->
+  
+
+    
+</head>
+
+<body>
+
+
+    <!-- first Header / fixed -->
+    <header class="firstHeader">
+
+        <div class="brandContainer">
+            <a href="index.html">IT Talents Training Camp</a>
+        </div>
+        <!-- Login page -->
+        <div id = 'logInContainer'class="logInContainer">
+            <div id="loginName">
+                {{username}}
+            </div>
+        </div>
+    </header>
+    <!-- container page -->
+
+    <!-- second header -->
+    <header>
+        <div class="nameContainer">
+            <h1 id = 'titleCourse'>IT Talents Moodle</h1>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <div class="regionMainContainer">
+            <div class="leftBox">
+                <article class="blockMainMenu">                    
+                    <ul>
+                        <li>
+                            <ul id="courseNav">
+                                <li><a href="../../index.html">Home</a></li>
+                                <li><a href="http://"><span class="arrow">►</span>Season</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </article>
+                <article id="blockNavigationMenu"class="blockMainMenu blockNavigationMenu">
+                    <h2>NAVIGATION</h2>
+                    <ul>
+                        <li>
+                            <p>
+                                <a id="backToHome"href="">Home</a>
+                            </p>
+                        </li>
+                        <li>
+                            <img class="icons" src="http://moodle.ittalents.bg/theme/image.php/more/forum/1460374795/icon">
+                            <a href="">Site news</a>
+                        </li>
+                        <li>
+                            <a href="" class="collapsible">Courses</a>
+                        </li>
+                    </ul>
+                    <ul>
+
+
+                    </ul>
+                </article>
+
+
+
+                <div class="block-nav-menu-course" id="block-nav-menu-course">
+                    <article class="blockMainMenu blockNavigationMenu">
+                        <h2 id="hyperHome">NAVIGATION</h2>
+                        <a id="hyperHome" href="../../index.html">Home</a>
+                        <ul>
+                            <li><a href="http://"><img class="" src="../images/navigationitem.svg"><span class="navMenu">Dashboard</span></a></li>
+                            <li id="drop1"><img id="rotate1" src="../images/collapsed.svg"><span class="navMenu">Site pages</span><li id="hidden1"><a href=""><img src="../images/collapsed.svg">Home</a></li></li>
+                            <li id="drop2"><img id="rotate2" src="../images/collapsed.svg"><span class="navMenu">My courses</span><li id="hidden2"><a href=""><img src="../images/collapsed.svg">JS Season X</a></li></li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+
+            <main class="middleContainer" id="middleContainer">
+                <h2>Available courses</h2>
+                <div class="courseBox">
+                    <img class="icons" src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/i/course">
+                    <a id = 'courseName'href="">JavaScript Season X</a>
+                </div>
+            </main>
+
+            <div class="middle-container-course" id="middle-container-course">
+            <main class="middleContainer">
+
+                <div class="courseBox">
+                    <ul class="lastLi">
+                        <li><img src="../images/news.svg" alt=""><a class="description" href="">News forum</a></li>
+                        <li><img src="../images/pdf-24.png" alt=""><a class="description" href="https://addyosmani.com/resources/essentialjsdesignpatterns/book/">Learning PHP Design Patterns</a></li>
+                        
+                        <li><img src="../images/pdf-24.png" alt=""><a class="description" href="../courseFiles/Lecture - Functions Advanced.pdf">Practice Task - OOP File</a></li>
+
+                        <li><img src="../images/link.svg" alt=""><a class="description" href="https://www.vinta.com.br/blog/2015/javascript-lambda-and-arrow-functions/">Link to function expressions article URL</a></li>
+                        <li><img src="../images/link.svg" alt=""><a class="description" href="http://es6-features.org/#Constants">ES6 New Features URL</a></li>
+                    </ul>
+                </div>
+                <div class="courseBox">
+                        <h1>7 November - 13 November</h1>
+                        <p>Lecture - Advanced Functions</p>
+                        <ul class="lastLi">
+                            <li><img src="../images/pdf-24.png" alt=""><a class="description" href="../courseFiles/Lecture - Functions Advanced.pdf">Lecture 8 - Homework - Recursive Functions</a></li>
+                            <li><img src="../images/archive-24.png" alt=""><a class="description" href="../courseFiles/Lecture - Functions Advanced.pdf">Code from today</a></li>
+                            <li><img src="../images/pdf-24.png" alt=""><a class="description" href="../courseFiles/Lecture - Functions Advanced.pdf">Lecture - Functions Advanced File</a></li>
+                            <li><img src="../images/link.svg" alt=""><a class="description" href="https://www.youtube.com/playlist?list=PLPRaPR8amWjVXwnuuthExRgb77VsrvAYC">Link to video</a></li>
+                        </ul>
+                    </div>
+                <div class="courseBox">
+                    <h1>14 November - 20 November</h1>
+                    <p>Lecture - Closures, High-Order Functions</p>
+                    <ul class="lastLi">
+                        <li><img src="../images/pdf-24.png" alt=""><a class="description" href="../courseFiles/Lecture - Functions Advanced.pdf">Lesson 15 - Practic</a></li>
+                        <li><img src="../images/pdf-24.png" alt=""><a class="description" href="../courseFiles/Lecture - Functions Advanced.pdf">Lesson 15 - Objects, Fields, References, Methods File</a></li>
+                        <li><img src="../images/archive-24.png" alt=""><a class="description" href="../courseFiles/Lecture - Functions Advanced.pdf">demo File</a></li>
+                        <li><img src="../images/link.svg" alt=""><a class="description" href="https://www.youtube.com/playlist?list=PLPRaPR8amWjVBUcF8XRDc5uD5wXAN0up3">Link to video</a></li>
+                    </ul>
+                </div>
+                <div class="courseBox">
+                    <h1 class="lastLi">21 November - 27 November</h1>
+                </div>
+                <div class="courseBox">
+                    <h1 class="lastLi">28 November - 4 December</h1>
+                </div>
+                <div class="courseBox">
+                    <h1 class="lastLi">5 December - 11 December</h1>
+                </div>
+    
+            </main>
+         </div>
+
+
+
+        </div>       
+        <div class="left-containers" id="left-containers">
+            <div class="lastest-news-container">
+                <h2 class="styles-h2">LASTEST NEWS</h2>
+                <div class="news-info">
+                    <p>There are no upcoming events</p>
+                </div>
+                <a href="index.html">go to home</a>
+            </div>
+
+            <main id="adminMainContainer" class="admin-main-container lastest-news-container" >
+                <h2 class="styles-h2" > ADMIN STUFF</h2>
+                <button id="showListStudent" class="styles-btn">show list student</button>
+                <button id="showListCourses" class="styles-btn">show courses</button>
+                <ul id="listStudent" class="list-student">
+                </ul>
+                <ul id="listCourses" class="list-student" ></ul>
+            </main>
+        </div>
+
+
+
+        <footer>
+            <div id="footer-login"class="footerLogInContainer">You are not logged in. (
+
+                <a href="/assets/html/login.html">Log in</a>)
+            </div>
+            <div class="siteLink">
+                <a title="Moodle" href="http://moodle.org/">
+                    <img src="http://moodle.ittalents.bg/theme/image.php/more/core/1460374795/moodlelogo" alt="Moodle logo">
+                </a>
+            </div>
+        </footer>
+
+    </div>
+
+
+
+</body>
+    
+<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src = "/node_modules/handlebars/dist/handlebars.min.js"></script>
+<script src="../js/User.js"></script>
+<script src="../js/Student.js"></script>
+<script src="../js/Admin.js"></script>
+<script src = "../js/userStorage.js"></script>
+<script src = "../js/userTemplate.js"></script>
+<script src="../js/course.js"></script>
+
+</html>

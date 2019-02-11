@@ -29,6 +29,8 @@
         const titleCourseEl = document.getElementById('titleCourse');
         const backToHomeEl = document.getElementById('backToHome');
         const footerLogin = document.getElementById('footer-login');
+        const connectStudentWithCourseEl = document.getElementById('connect-student-with-course')
+        connectStudentWithCourseEl.style.display = 'block'
         footerLogin.innerHTML = 'You are logged in';
         
 
