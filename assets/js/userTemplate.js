@@ -117,16 +117,23 @@
     
 
     if (userData.role === 'student') {
+        if(userData.course === '') {
+            middleContainerCourseEl.style.display='none';
+            middleContainerEl.style.display = 'none';
+            alert('ne si razpredelen')
+            
+         }
         
         const blockNavigationMenuEl = document.getElementById('blockNavigationMenu');
         blockNavigationMenuEl.style.display='none';
         const blockNavMenuCourseEl = document.getElementById('block-nav-menu-course');
         blockNavMenuCourseEl.style.display = 'block';
-        const middleContainerEl = document.getElementById('middleContainer');
+        var middleContainerEl = document.getElementById('middleContainer');
         middleContainerEl.style.display = 'none';
-        const middleContainerCourseEl = document.getElementById('middle-container-course');
+         var middleContainerCourseEl = document.getElementById('middle-container-course');
         middleContainerCourseEl.style.display = 'inline'
         
+
         
         console.log(blockNavMenuCourseEl)
        
