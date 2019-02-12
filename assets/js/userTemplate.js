@@ -76,7 +76,7 @@
             event.preventDefault();
             middleContainerEl.style.display = 'none'
             middleContainerCourseEl.style.display = 'inline';
-            titleCourseEl.innerHTML = document.getElementById('courseNameJS').innerText;
+            titleCourseEl.innerHTML = document.getElementById('courseNameJava').innerText;
 
             
         });
@@ -84,7 +84,7 @@
             event.preventDefault();
             middleContainerEl.style.display = 'none'
             middleContainerCourseEl.style.display = 'inline';
-            titleCourseEl.innerHTML = document.getElementById('courseNameJS').innerText;
+            titleCourseEl.innerHTML = document.getElementById('courseNamePHP').innerText;
 
             
         });
