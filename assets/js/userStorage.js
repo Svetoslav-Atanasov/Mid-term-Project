@@ -49,7 +49,7 @@ var userStorage = (function() {
         new Student('student', 'Bb-12345', 'l.eftimova@gmail.com', 'l.eftimova@gmail.com', 'Lora', 'Eftimova', 'Sofia', 'Bulgaria')
     ];
 
-    let coursesList = ['JavaScript X', 'BG', 'JS'];
+    let coursesList = ['JavaScript X', 'Java', 'PHP'];
 
     /////////////////////////////////////////////////////////////////////////////////
 
