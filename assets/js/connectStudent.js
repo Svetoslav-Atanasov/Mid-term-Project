@@ -51,13 +51,13 @@ admin.userList.forEach(user => {
     if(user.role === 'student') {
         idStudentCheckbox++
         $('#hidde1').append(
-        $(`<p id = ${idStudentCheckbox}>${user.username}<input class ="userCheck"name=checkbox id= ${idStudentCheckbox} type="checkbox"/></p>`));
+        $(`<p id = ${idStudentCheckbox}>${user.username}<input class ="userCheck"name=checkbox id= ${idStudentCheckbox} type="radio"/></p>`));
     }
 });
 admin.courses.forEach(course => {
     idCourseCheckbox++
         $('#hidde2').append(
-        $(`<p id= ${idCourseCheckbox}>${course}<input class ="courseCheck"name=checkbox2 id= ${idCourseCheckbox} type="checkbox"/></p>`));
+        $(`<p id= ${idCourseCheckbox}>${course}<input class ="courseCheck"name=checkbox2 id= ${idCourseCheckbox} type="radio"/></p>`));
     
 });
 
@@ -77,34 +77,34 @@ console.log(userCheck)
 
 // todo change courses must be <option>
 
-    $(courseCheck).each(i => {
+    $(userCheck).each(i => {
         
-        $(courseCheck[i]).change(function(){
-            if($(courseCheck).is(':checked')) {
+        $(userCheck[i]).change(function(){
+            if($(userCheck).is(':checked')) {
                 console.log('Checkbox is checked');
                
-                var correctCourse = $(this).parent().text()
-                var foundCourse = admin.courses.find(course => {
-                    if(course == correctCourse) {
-                        return course
+                var correctUser = $(this).parent().text()
+                var foundUser = admin.userList.find(user => {
+                    if(user.username == correctUser) {
+                        return user
                     }
                 })
-                console.log('this is' + foundCourse)
-                $(userCheck).each(j => {
+                console.log('this is' + foundUser)
+                $(courseCheck).each(j => {
     
-                    $(userCheck[j]).change(function(){
-                        if($(userCheck).is(':checked')) {
+                    $(courseCheck[j]).change(function(){
+                        if($(courseCheck).is(':checked')) {
                             console.log('Checkbox is checked');                            
             
                            
-                            var correctUser = $(this).parent().text()
+                            var correctCourse = $(this).parent().text()
 
-                            var foundUser = admin.userList.find(user => {
-                                if(user.username === correctUser) {
-                                    return user
+                            var foundCourse = admin.courses.find(course => {
+                                if(course === correctCourse) {
+                                    return course
                                 }
                             })
-                            console.log(foundUser)
+                            console.log(foundCourse)
                             btnConnectEl.addEventListener('click', function (event) {
                                 event.preventDefault();
                                
