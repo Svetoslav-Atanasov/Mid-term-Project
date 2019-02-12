@@ -110,6 +110,7 @@ console.log(userCheck)
                                
                                 admin.enrollToACourse(foundUser,foundCourse)
                                 console.log(foundUser)
+                                alert(foundUser.username + ' connected to  ' + foundCourse)
                                 return
                             })
                         } else {
