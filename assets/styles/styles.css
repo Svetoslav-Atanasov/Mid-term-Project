@@ -375,7 +375,6 @@ footer {
 #rotate1,
 #rotate2 {
     cursor: pointer;
-<<<<<<< HEAD
     margin-top: 6px;
     background: #333366;
 }
@@ -397,7 +396,4 @@ footer {
 
 .description {
     padding-left: 1vh;
-
-
->>>>>>> f49a14b5d332eaef157d87840582bad0d909655a
 }
